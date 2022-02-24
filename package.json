@@ -1,0 +1,14 @@
+{
+  "name": "openapi-clapy",
+  "version": "1.0.0",
+  "description": "OpenAPI specification of Clapy",
+  "main": "index.js",
+  "scripts": {
+    "generate-html": "redoc-cli bundle --output ./output/clapy.html clapy.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redoc-cli": "^0.9.8"
+  }
+}

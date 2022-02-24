@@ -1,0 +1,35 @@
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: A token retrieved from `authd`. If the token contains an `aud` claim, then Clapy expects it to contain the value `clapy`, otherwise the token will be rejected. Tokens with no `aud` claim are also accepted.
+info:
+    version: 2.0.0
+    title: example
+    description: description
+servers:
+  - url: https://host/api/v1
+openapi: 3.0.3
+paths:
+  /api/v1/examples/{id}:
+    get:
+     summary: Get example
+     tags:
+       - Example
+     responses:
+       '200':
+         content:
+           application/json:
+             schema:
+               $ref: schemas/Example.yaml#/components/schemas/Example
+             example:
+               $ref: examples/example.json
+         description: Example description
+       default:
+         content:
+           application/json:
+             schema:
+               $ref: schemas/Error.yaml#/components/schemas/Error
+         description: Error condition

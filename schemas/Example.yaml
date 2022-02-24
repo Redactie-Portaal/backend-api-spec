@@ -1,0 +1,12 @@
+components:
+  schemas:
+    Example:
+      description: The example
+      properties:
+        exampleproperty:
+          type: string
+          description: this is an example.
+          example: "hier een voorbeeld van de value die het kan hebben"
+      required:
+      - exampleproperty
+      type: object
