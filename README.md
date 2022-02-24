@@ -1,2 +1,2 @@
 # backend-api-spec
-Gedeelte openapi swagger spec
+Gedeelde openapi swagger spec
