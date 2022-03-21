@@ -1,0 +1,28 @@
+components:
+  schemas:
+    Dashboard:
+      description: dashboard example
+      type: object
+      properties:
+        dashboardItems: 
+          $ref: '#/components/schemas/DashboardItems'
+            
+    DashboardItems:
+      type: array
+      minItems: 4
+      maxItems: 4
+      items:
+        $ref: '#/components/schemas/Item'
+    
+    Item:
+      description: item example
+      type: object
+      properties:
+        id: 
+          type: integer
+        name: 
+          type: string
+        creationDate:
+          type: string
+        author:
+          type: string

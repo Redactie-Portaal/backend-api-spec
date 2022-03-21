@@ -6,9 +6,9 @@ components:
       bearerFormat: JWT
       description: A token retrieved from `authd`. If the token contains an `aud` claim, then Clapy expects it to contain the value `clapy`, otherwise the token will be rejected. Tokens with no `aud` claim are also accepted.
 info:
-    version: 2.0.0
-    title: example
-    description: description
+    title: API Specificatie Redactie portaal.
+    description: Dit document bevat de API specificaties van het Redactie portaal back-end.
+    version: 0.0.1
 servers:
   - url: https://host/api/v1
 openapi: 3.0.3
@@ -33,3 +33,54 @@ paths:
              schema:
                $ref: schemas/Error.yaml#/components/schemas/Error
          description: Error condition
+
+  /api/v1/dashboard:
+    get:
+      summary: Dashboard items ophalen
+      tags:
+        - Example
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
+          description: Dit is een voorbeeld van de dashboard.
+
+  /api/v1/item/{id}: 
+    get: 
+      summary: Get specific item
+      tags:
+        - Example
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Dashboard.yaml#/components/schemas/Item
+                parameters: 
+                - name: id
+                in: path
+                required: true 
+          description: Dit is een voorbeeld van een item pagina.
+
+  /api/v1/item/create:
+    post:
+      summary: Create an item
+      tags:
+        - Example
+      responses:
+        '201':
+          description: Object created.
+      requestBody:
+        description: Dit is een voorbeeld waar een item aangemaakt wordt.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Dashboard.yaml#/components/schemas/Item
+            example:
+              id: 1
+              name: Bitcoin is weer gedaald...
+              creationDate: 15:16 21-03-2022
+              author: Henk de Jong
