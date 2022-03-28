@@ -9,8 +9,8 @@ components:
             
     DashboardItems:
       type: array
-      minItems: 4
-      maxItems: 4
+      minItems: 0
+      maxItems: 10
       items:
         $ref: '#/components/schemas/Item'
     
