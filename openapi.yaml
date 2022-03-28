@@ -13,45 +13,24 @@ servers:
   - url: https://host/api/v1
 openapi: 3.0.3
 paths:
-  /api/v1/examples/{id}:
-    get:
-     summary: Get example
-     tags:
-       - Example
-     responses:
-       '200':
-         content:
-           application/json:
-             schema:
-               $ref: schemas/Example.yaml#/components/schemas/Example
-             example:
-               $ref: examples/Example.json
-         description: Example description
-       default:
-         content:
-           application/json:
-             schema:
-               $ref: schemas/Error.yaml#/components/schemas/Error
-         description: Error condition
-
   /api/v1/dashboard:
     get:
       summary: Dashboard items ophalen
       tags:
-        - Example
+        - Dashboard
       responses:
         '200':
           content:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-          description: Dit is een voorbeeld van de dashboard.
+          description: Dit is een voorbeeld van hoe de dashboard op zou kunnen gehaald worden.
 
   /api/v1/item/{id}: 
     get: 
       summary: Get specific item
       tags:
-        - Example
+        - News item
       responses:
         '200':
           content:
@@ -62,18 +41,18 @@ paths:
                 - name: id
                 in: path
                 required: true 
-          description: Dit is een voorbeeld van een item pagina.
+          description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
 
   /api/v1/item/create:
     post:
       summary: Create an item
       tags:
-        - Example
+        - Creating item
       responses:
         '201':
           description: Object created.
       requestBody:
-        description: Dit is een voorbeeld waar een item aangemaakt wordt.
+        description: Dit is een voorbeeld van hoe je een item aan kunt maken met een requestbody.
         required: true
         content:
           application/json:
