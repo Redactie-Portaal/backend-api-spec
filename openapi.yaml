@@ -6,30 +6,60 @@ components:
       bearerFormat: JWT
       description: A token retrieved from `authd`. If the token contains an `aud` claim, then Clapy expects it to contain the value `clapy`, otherwise the token will be rejected. Tokens with no `aud` claim are also accepted.
 info:
-    version: 2.0.0
-    title: example
-    description: description
+    title: API Specificatie Redactie portaal.
+    description: Dit document bevat de API specificaties van het Redactie portaal back-end.
+    version: 0.0.1
 servers:
   - url: https://host/api/v1
 openapi: 3.0.3
 paths:
-  /api/v1/examples/{id}:
+  /api/v1/dashboard:
     get:
-     summary: Get example
-     tags:
-       - Example
-     responses:
-       '200':
-         content:
-           application/json:
-             schema:
-               $ref: schemas/Example.yaml#/components/schemas/Example
-             example:
-               $ref: examples/Example.json
-         description: Example description
-       default:
-         content:
-           application/json:
-             schema:
-               $ref: schemas/Error.yaml#/components/schemas/Error
-         description: Error condition
+      summary: Dashboard items ophalen
+      tags:
+        - Dashboard
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
+          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
+
+  /api/v1/item/{id}: 
+    get: 
+      summary: Get specific item
+      tags:
+        - News item
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Dashboard.yaml#/components/schemas/Item
+                parameters: 
+                - name: id
+                in: path
+                required: true 
+          description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
+
+  /api/v1/item/create:
+    post:
+      summary: Create an item
+      tags:
+        - Creating item
+      responses:
+        '201':
+          description: Object created.
+      requestBody:
+        description: Dit is een voorbeeld van hoe je een item aan kunt maken met een requestbody.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Dashboard.yaml#/components/schemas/Item
+            example:
+              id: 1
+              name: Bitcoin is weer gedaald...
+              creationDate: 15:16 21-03-2022
+              author: Henk de Jong

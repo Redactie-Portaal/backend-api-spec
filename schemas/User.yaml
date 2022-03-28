@@ -1,0 +1,12 @@
+components:
+  schemas:
+    User:
+      description: user example
+      type: object
+      properties:
+        id: 
+          type: integer
+        name: 
+          type: string
+        role:
+          type: string
