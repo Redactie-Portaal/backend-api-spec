@@ -24,7 +24,7 @@ paths:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-          description: Dit is een voorbeeld van hoe de dashboard op zou kunnen gehaald worden.
+          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
 
   /api/v1/item/{id}: 
     get: 
