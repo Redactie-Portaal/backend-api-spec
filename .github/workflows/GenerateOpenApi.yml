@@ -50,12 +50,9 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YEAR: "${{ steps.current-time.outputs.year }}"
-          DAY: "${{ steps.current-time.outputs.day }}"
-          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ $YEAR }} ${{ $DAY }} ${{ $F_TIME }}
+          release_name: Release ${{ steps.current-time.outputs.year }} ${{ steps.current-time.outputs.day }} ${{ steps.current-time.outputs.time }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
