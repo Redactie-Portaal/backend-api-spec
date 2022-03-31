@@ -39,14 +39,23 @@ jobs:
         with:
          name: Api Spec PDF
          path: ./output/Api_Spec.pdf
+      - name: Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+         format: YYYYMMDD-HH
+         utcOffset: "+02:00"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YEAR: "${{ steps.current-time.outputs.year }}"
+          DAY: "${{ steps.current-time.outputs.day }}"
+          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          release_name: Release ${{ $YEAR }} ${{ $DAY }} ${{ $F_TIME }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
