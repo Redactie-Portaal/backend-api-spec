@@ -1,0 +1,45 @@
+components:
+  schemas:
+    Destination:
+      description: Export destination
+      type: object
+      properties:
+        Id:
+          type: string
+          description: Id of the export plugin
+        Name:
+          type: string
+          description: Name of the export plugin
+        Description:
+          type: string
+          description: description of the export plugin
+        Icon:
+          type: string
+          description: Base64 representation of the icon.
+        ApiKeyFormat:
+          type: string
+          description: Text explaining how to format the api key, usefull for when a plugin needs multiple api keys.
+        RequiredInfo:
+          description: A list of info the plugin requires to publish.
+          type: array
+          items:
+            enum:
+             - Title
+             - Video
+             - Text
+             - ShortText
+             - Audio
+             - Images
+            type: string
+    Destination_List:
+      description: List of destinations
+      type: array
+      items:
+        $ref: "#/components/schemas/Destination"
+    DestinationUpdate:
+      description: Update info on a export destination.
+      type: object
+      properties:
+        ApiKeyFormat: 
+          type: string
+          description: Api key(s) formatted according to the plugins ApiKeyFormat.

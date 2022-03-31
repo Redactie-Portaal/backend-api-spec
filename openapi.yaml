@@ -43,11 +43,11 @@ paths:
                 required: true 
           description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
 
-  /api/v1/item/create:
+  /api/v1/item:
     post:
       summary: Create an item
       tags:
-        - Creating item
+        - News item
       responses:
         '201':
           description: Object created.
@@ -63,3 +63,66 @@ paths:
               name: Bitcoin is weer gedaald...
               creationDate: 15:16 21-03-2022
               author: Henk de Jong
+  /api/v1/ExportDestinations:
+    get:
+      summary: Get list of export destinations
+      tags:
+        - Export plugins
+      responses:
+        '200':
+          description: List of plugins
+          content:
+            application/json:
+              schema:
+                $ref: schemas/ExportDestination.yaml#/components/schemas/Destination_List
+              example:
+                $ref: examples/Response/ExportDestinationList.json
+  /api/v1/ExportDestinations/{id}:
+    get:
+      summary: Get export destination
+      tags:
+        - Export plugins
+      responses:
+        '200':
+          description: Information on export plugin
+          content:
+            application/json:
+              schema:
+                $ref: schemas/ExportDestination.yaml#/components/schemas/Destination
+              example:
+                $ref: examples/Response/ExportDestination.json
+    patch:
+      summary: Edit plugin details
+      tags:
+        - Export plugins
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/ExportDestination.yaml#/components/schemas/DestinationUpdate
+            example:
+              $ref: examples/Response/ExportDestinationUpdate.json
+      responses:
+        '200':
+          description: Representation of the updated plugin.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/ExportDestination.yaml#/components/schemas/Destination
+              example:
+                $ref: examples/Response/ExportDestination.json
+  /api/v1/ExportDestinations/{id}/Actions.Publish:
+    post:
+      summary: Export news item to selected platform.
+      tags:
+        - Export plugins
+      responses:
+        '200':
+          description: Object published.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              $ref: examples/Request/PublishStory.json
