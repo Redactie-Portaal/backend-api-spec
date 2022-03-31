@@ -1,0 +1,8 @@
+{
+    "Id": "cbb97137-ad12-4344-ab61-8741934090f1",
+    "Name" : "Example export plugin",
+    "Description" : "Example export plugin, writes to nothing",
+    "icon" : "Base64 string representing image",
+    "RequiredInfo" : ["Title", "Video", "Text", "ShortText", "Audio", "Images"],
+    "ApiKeyFormat" : "ApiKey|apiSecret|apiCode|apiCodeSecret"
+}
