@@ -1,0 +1,15 @@
+{
+    "Title": "string",
+    "Author": "string",
+    "Source": {},
+    "BodyDescription": "string",
+    "ContactDetails": "string",
+    "LocationDetails": "string",
+    "ProdutionDate": "2022-04-04T11:26:35.864Z",
+    "EndDate": "2022-04-04T11:26:35.864Z",
+    "Category": "NEWS|PROGRAMME|STORY",
+    "Region": "PROVINCE|LOCAL",
+    "Video": null,
+    "Audio": null,
+    "Photo": null
+  }

@@ -20,48 +20,79 @@ paths:
         - Dashboard
       responses:
         '200':
+          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
           content:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
 
-  /api/v1/item/{id}: 
+  /api/v1/newsitem/{id}: 
     get: 
-      summary: Get specific item
+      summary: Get a specific newsitem
       tags:
-        - News item
+        - Newsitem
       responses:
         '200':
+          description: Newsitem information
           content:
             application/json:
               schema:
-                $ref: schemas/Dashboard.yaml#/components/schemas/Item
+                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
                 parameters: 
                 - name: id
                 in: path
                 required: true 
-          description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
-  /api/v1/item:
-    post:
-      summary: Create an item
+              example:
+                $ref: examples/response/GetNewsItem.json
+    patch:
+      summary: Edits newsitem
       tags:
-        - News item
+        - "Newsitem"
       responses:
-        '201':
-          description: Object created.
+        '200':
+          description: Updated newsitem
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+                parameters: 
+                - name: id
+                in: path
+                required: true 
+              example:
+                $ref: examples/response/GetNewsItem.json
       requestBody:
-        description: Dit is een voorbeeld van hoe je een item aan kunt maken met een requestbody.
         required: true
         content:
           application/json:
             schema:
-              $ref: schemas/Dashboard.yaml#/components/schemas/Item
+              $ref: schemas/Newsitem.yaml#/components/schemas/EditNewsItem
             example:
-              id: 1
-              name: Bitcoin is weer gedaald...
-              creationDate: 15:16 21-03-2022
-              author: Henk de Jong
+              $ref: examples/request/NewsitemEdit.json
+
+    delete:
+      summary: Deletes a specific newsitem
+      tags:
+        - Newsitem
+      responses:
+        '200':
+          description: Newsitem removed
+  /api/v1/newsitem:
+    post:
+      summary: Create a newsitem
+      tags:
+        - Newsitem
+      responses:
+        '201':
+          description: Object created.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Newsitem.yaml#/components/schemas/ItemCreation
+            example:
+              $ref: examples/request/CreateNewsItem.json
   /api/v1/ExportDestinations:
     get:
       summary: Get list of export destinations
