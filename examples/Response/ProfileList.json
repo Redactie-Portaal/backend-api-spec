@@ -1,0 +1,32 @@
+[
+    {
+        "Id" : "efc69502-85b1-4b91-9529-c92b5ebc8f9e",
+        "Name" :"John Doe",
+        "ContactDetails" : {
+            "Phone" : "0612345678",
+            "Email": "test@flevoland.nl",
+            "Address" : "Laserpoortweg",
+            "PostalCode" : "5087PS",
+            "City" : "Urk",
+            "Province" : "Flevoland"
+        },
+        "ProfilePicture"  :"Base64String/url.com",
+        "Role" : "Editor",
+        "LastOnline": "2008-10-31T17:04:32"
+    },
+    {
+        "Id" : "efc69502-85b1-4b91-8529-c92b5ebc8f9e",
+        "Name" :"Jane Doe",
+        "ContactDetails" : {
+            "Phone" : "0612345678",
+            "Email": "test@flevoland.nl",
+            "Address" : "Laserpoortweg",
+            "PostalCode" : "5087PS",
+            "City" : "Urk",
+            "Province" : "Flevoland"
+        },
+        "ProfilePicture"  :"Base64String/url.com",
+        "Role" : "Intern",
+        "LastOnline": "2008-10-31T17:04:32"
+    }
+]
