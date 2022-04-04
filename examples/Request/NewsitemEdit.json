@@ -1,15 +1,15 @@
 {
-    "title": "string",
-    "status": null,
-    "author": "string",
-    "source": {},
-    "bodyDescription": "string",
-    "contactDetails": "string",
-    "locationDetails": "string",
-    "endDate": "2022-04-04T11:26:35.864Z",
-    "category": "NEWS|PROGRAMME|STORY",
-    "region": "PROVINCE|LOCAL",
-    "video": null,
-    "audio": null,
-    "photo": null
+    "Title": "string",
+    "Status": null,
+    "Author": "string",
+    "Source": {},
+    "BodyDescription": "string",
+    "ContactDetails": "string",
+    "LocationDetails": "string",
+    "EndDate": "2022-04-04T11:26:35.864Z",
+    "Category": "NEWS|PROGRAMME|STORY",
+    "Region": "PROVINCE|LOCAL",
+    "Video": null,
+    "Audio": null,
+    "Photo": null
   }
