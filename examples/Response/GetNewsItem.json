@@ -1,0 +1,17 @@
+{
+    "id": "26ae7449-9b9d-421c-b73b-c6d25b6fce8f",
+    "title": "string",
+    "status": 1,
+    "author": "string",
+    "source": {},
+    "body": null,
+    "contactDetails": "string",
+    "locationDetails": "string",
+    "produtionDate": "2022-04-04T08:25:22.465Z",
+    "endDate": "2022-04-04T08:25:22.465Z",
+    "category": 1,
+    "region": 1,
+    "video": null,
+    "audio": null,
+    "photo": null
+  }
