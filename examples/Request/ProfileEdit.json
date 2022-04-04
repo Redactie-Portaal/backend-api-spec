@@ -1,0 +1,12 @@
+{
+    "Name" :"John Doe",
+    "ContactDetails" : {
+        "Phone" : "0612345678",
+        "Email": "test@flevoland.nl",
+        "Address" : "Laserpoortweg",
+        "PostalCode" : "5087PS",
+        "City" : "Urk",
+        "Province" : "Flevoland"
+    },
+    "ProfilePicture"  :"Base64String/url.com"
+}

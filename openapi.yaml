@@ -42,7 +42,6 @@ paths:
                 in: path
                 required: true 
           description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
-
   /api/v1/item:
     post:
       summary: Create an item
@@ -126,3 +125,52 @@ paths:
           application/json:
             example:
               $ref: examples/Request/PublishStory.json
+  /api/v1/Profiles:
+    get:
+      summary: Get list of /api/v1/Profiles/
+      tags:
+       - Profile
+      responses:
+        '200':
+          description: List of profiles
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/ProfileList.json
+             schema:
+               $ref: schemas/Profile.yaml#/components/schemas/ProfileList
+  /api/v1/Profiles/{id}:
+    get:
+      summary: Get list of /api/v1/Profiles/
+      tags:
+       - Profile
+      responses:
+        '200':
+          description: Representation of profile
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/Profile.json
+             schema:
+               $ref: schemas/Profile.yaml#/components/schemas/Profile
+    patch:
+      summary: Update user details
+      tags:
+        - Profile
+      responses:
+        '200':
+          description: Updated user
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/Profile.json
+             schema:
+               $ref: schemas/Profile.yaml#/components/schemas/Profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              $ref: examples/Request/ProfileEdit.json
+            schema:
+              $ref: schemas/Profile.yaml#/components/schemas/Profile

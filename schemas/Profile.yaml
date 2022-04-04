@@ -1,0 +1,55 @@
+components:
+  schemas:
+    ContactDetails:
+      type: object
+      description: the contact details of the user
+      properties:
+        Phone:
+          type: string
+          description: the phone number of the user
+        Email:
+          type: string
+          description: Email address of the user
+        Address:
+          type: string
+          description: the street and housenumber of the user
+        PostalCode:
+          type: string
+          description: The postalcode of the user
+        Province:
+          type: string
+          description: What province a user lives in
+        City:
+          type: string
+          description: the city the user lives in
+    Profile:
+      description: A user profiles
+      properties:
+        Id:
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Name:
+          description: The name of the user
+          example: John Doe
+          type: string
+        ContactDetails:
+          - allOf:
+            - $ref: "#/components/schemas/ContactDetails"
+        ProfilePicture:
+          type: string
+          description: The profile picture of the user, as url or base64 format
+        Role:
+          type: string
+          description: The role of the user.
+          readonly: true
+        LastOnline:
+          type: datetime
+          description: The date and time the user was last seen online
+          readonly: true
+    ProfileList:
+      description: A list of the user's
+      items:
+        $ref: "#/components/schemas/Profile"
+      type: array
+
