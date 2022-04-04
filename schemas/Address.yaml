@@ -1,0 +1,27 @@
+components:
+  schemas:
+    AddressModel:
+      description: Address 
+      type: object
+      properties:
+        Id: 
+          type: integer
+          description: Id of the address
+        CompanyName: 
+          type: string
+          description: Name of the company
+        Address:
+          type: string
+          description: Address of the company
+        PostalCode:
+          type: string
+          description: Postalcode of the company
+        PhoneNumber:
+          type: string
+          description: Phonenumber of the company
+        EmailAddress:
+          type: string
+          description: Emailaddress of the company
+        Webpage:
+          type: string
+          description: Webpage of the company

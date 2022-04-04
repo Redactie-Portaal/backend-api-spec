@@ -125,6 +125,79 @@ paths:
           application/json:
             example:
               $ref: examples/Request/PublishStory.json
+/api/v1/Address/{id}:
+    get:
+      summary: Get address by id
+      tags:
+        - Address
+      responses:
+        '200':
+          description: Address is received
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Address.yaml#/components/AddressModel
+              example:
+                $ref: examples/Response/Address.json
+    delete:
+        summary: Delete an Address
+        tags:
+        - Address
+        responses:
+        '200':
+            description: Address deleted.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address kunt verwijderen
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Address
+            example:
+                id: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+/api/v1/Address:
+    post:
+        summary: Create an Address
+        tags:
+        - Address
+        responses:
+        '201':
+            description: Address created.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address aan kunt maken met een requestbody.
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Address
+            example:
+                companyName: deknikkergroep
+                address: Bartokstraat 114
+                postalCode: 5050HA
+                phoneNumber: 0649392848
+                emailAddress: deknikkergroep@gmail.com
+                webpage: www.deknikkergroep.nl
+    put:
+        summary: update an Address
+        tags:
+        - Address
+        responses:
+        '200':
+            description: Address updated.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address kunt updaten
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Address
+            example:
+                id: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                companyName: deganzengroep
+                address: hanasstraat 114
+                postalCode: 5050HA
+                phoneNumber: 0649392848
+                emailAddress: deganzengroep@gmail.com
+                webpage: www.deganzengroep.nl
+
+
   /api/v1/Profiles:
     get:
       summary: Get list of /api/v1/Profiles/
