@@ -38,10 +38,6 @@ paths:
             application/json:
               schema:
                 $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
-                parameters: 
-                - name: id
-                in: path
-                required: true 
               example:
                 $ref: examples/Response/GetNewsItem.json
     patch:
@@ -55,10 +51,6 @@ paths:
             application/json:
               schema:
                 $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
-                parameters: 
-                - name: id
-                in: path
-                required: true 
               example:
                 $ref: examples/Response/GetNewsItem.json
       requestBody:
@@ -69,7 +61,6 @@ paths:
               $ref: schemas/Newsitem.yaml#/components/schemas/EditNewsItem
             example:
               $ref: examples/Request/NewsitemEdit.json
-
     delete:
       summary: Deletes a specific newsitem
       tags:
