@@ -43,7 +43,7 @@ paths:
                 in: path
                 required: true 
               example:
-                $ref: examples/response/GetNewsItem.json
+                $ref: examples/Response/GetNewsItem.json
     patch:
       summary: Edits newsitem
       tags:
@@ -60,7 +60,7 @@ paths:
                 in: path
                 required: true 
               example:
-                $ref: examples/response/GetNewsItem.json
+                $ref: examples/Response/GetNewsItem.json
       requestBody:
         required: true
         content:
@@ -68,7 +68,7 @@ paths:
             schema:
               $ref: schemas/Newsitem.yaml#/components/schemas/EditNewsItem
             example:
-              $ref: examples/request/NewsitemEdit.json
+              $ref: examples/Request/NewsitemEdit.json
 
     delete:
       summary: Deletes a specific newsitem
@@ -92,7 +92,7 @@ paths:
             schema:
               $ref: schemas/Newsitem.yaml#/components/schemas/ItemCreation
             example:
-              $ref: examples/request/CreateNewsItem.json
+              $ref: examples/Request/CreateNewsItem.json
   /api/v1/ExportDestinations:
     get:
       summary: Get list of export destinations
