@@ -196,3 +196,59 @@ paths:
               $ref: examples/Request/ProfileEdit.json
             schema:
               $ref: schemas/Profile.yaml#/components/schemas/Profile
+  /api/v1/CalendarItems:
+    get:
+      summary: Get list of calendar items
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: List of calendar items
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItemList.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItemList
+  /api/v1/CalendarItems/{id}:
+    get:
+      summary: Get specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: Representation of the calendar item
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItem.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+    delete:
+      summary: Delete specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '201':
+          description: Accepted, but no content
+    patch:
+      summary: Update specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: Representation of the updated calendar item
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItem.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+           example:
+            $ref: examples/Request/CalendarItemEdit.json
+           schema:
+            $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
