@@ -4,6 +4,9 @@ components:
       type: object
       description: An item in the calendar
       properties:
+        Id:
+          type: string
+          example: 'cbb97137-ad12-4344-ab61-8741934090f1'
         Title:
           type: string
           description: Title of the calendar item
@@ -18,9 +21,15 @@ components:
           description: The group the item belongs to.
           enum:
            - TV
+           - Website
+           - SocialMedia
            - Radio
            - Text
           type: string
+        NewsItem:
+          type: string
+          description: ID of the linked news item.
+          example: 'cbb97137-ad12-4344-ab61-8741934090f1'
     CalendarItemList:
       description: A list of calendar items.
       items:
