@@ -1,0 +1,28 @@
+components:
+  schemas:
+    CalendarItem:
+      type: object
+      description: An item in the calendar
+      properties:
+        Title:
+          type: string
+          description: Title of the calendar item
+        DateTime: 
+          type: datetime
+          description: The date and time of the item.
+          example: '2008-10-31T17:04:32'
+        Description:
+          type: string
+          description: Information describing the item
+        Group:
+          description: The group the item belongs to.
+          enum:
+           - TV
+           - Radio
+           - Text
+          type: string
+    CalendarItemList:
+      description: A list of calendar items.
+      items:
+        $ref: "#/components/schemas/CalendarItem"
+      type: array
