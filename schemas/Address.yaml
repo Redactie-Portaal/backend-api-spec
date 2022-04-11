@@ -25,3 +25,11 @@ components:
         Webpage:
           type: string
           description: Webpage of the company
+    Delete:
+        description: Delete Address 
+        type: GUID
+        properties:
+            Id: 
+              type: GUID
+              description: GUID of the address
+        

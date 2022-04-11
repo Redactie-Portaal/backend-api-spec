@@ -138,7 +138,7 @@ paths:
               schema:
                 $ref: schemas/Address.yaml#/components/AddressModel
               example:
-                $ref: examples/Response/Address.json
+                GUID: 3fa85f64-5717-4562-b3fc-2c963f66afa6       
     delete:
         summary: Delete an Address
         tags:
@@ -151,9 +151,9 @@ paths:
         content:
             application/json:
             schema:
-                $ref: schemas/Address.yaml#/components/schemas/Address
-            example:
-                id: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                $ref: schemas/Address.yaml#/components/schemas/Delete
+            example: 
+                 url: ../api/[controller]/"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"   
 /api/v1/Address:
     post:
         summary: Create an Address
@@ -169,13 +169,9 @@ paths:
             schema:
                 $ref: schemas/Address.yaml#/components/schemas/Address
             example:
-                companyName: deknikkergroep
-                address: Bartokstraat 114
-                postalCode: 5050HA
-                phoneNumber: 0649392848
-                emailAddress: deknikkergroep@gmail.com
-                webpage: www.deknikkergroep.nl
-    put:
+              $ref: examples/Response/Address.json
+            
+    patch:
         summary: update an Address
         tags:
         - Address
@@ -189,43 +185,37 @@ paths:
             schema:
                 $ref: schemas/Address.yaml#/components/schemas/Address
             example:
-                id: 3fa85f64-5717-4562-b3fc-2c963f66afa6
-                companyName: deganzengroep
-                address: hanasstraat 114
-                postalCode: 5050HA
-                phoneNumber: 0649392848
-                emailAddress: deganzengroep@gmail.com
-                webpage: www.deganzengroep.nl
+              $ref: examples/Response/Address.json
 
 
-  /api/v1/Profiles:
+/api/v1/Profiles:
+get:
+    summary: Get list of /api/v1/Profiles/
+    tags:
+    - Profile
+    responses:
+    '200':
+        description: List of profiles
+        content:
+        application/json:
+            example:
+            $ref: examples/Response/ProfileList.json
+            schema:
+            $ref: schemas/Profile.yaml#/components/schemas/ProfileList
+/api/v1/Profiles/{id}:
     get:
-      summary: Get list of /api/v1/Profiles/
-      tags:
-       - Profile
-      responses:
+        summary: Get list of /api/v1/Profiles/
+        tags:
+        - Profile
+        responses:
         '200':
-          description: List of profiles
-          content:
-           application/json:
-             example:
-               $ref: examples/Response/ProfileList.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/ProfileList
-  /api/v1/Profiles/{id}:
-    get:
-      summary: Get list of /api/v1/Profiles/
-      tags:
-       - Profile
-      responses:
-        '200':
-          description: Representation of profile
-          content:
-           application/json:
-             example:
-               $ref: examples/Response/Profile.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/Profile
+            description: Representation of profile
+            content:    
+            application/json:
+                example:
+                $ref: examples/Response/Profile.json
+                schema:
+                $ref: schemas/Profile.yaml#/components/schemas/Profile
     patch:
       summary: Update user details
       tags:
