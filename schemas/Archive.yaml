@@ -1,0 +1,83 @@
+components:
+  schemas:
+    GetArchive:
+      type: object
+      description: Gets the archive specified
+      properties:
+        Id:
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Title:
+          description: The title of the archive to identify what it contains.
+          example: Archive of Flevoland Police station
+          type: string
+        Label:
+          description: Labels that identify the archive, these will be the keywords used to search for this archive.
+          example: Police,Station,Flevoland
+          type: string
+        MediaPhotoItems:
+          type: array
+          description: A list of all the photo items that are contained within the archive.
+        MediaVideoItems:
+          type: array
+          description: A list of all the video items that are contained within the archive.
+        MediaAudioItems:
+          type: array
+          description: A list of all the audio items that are contained within the archive.
+        ArchivedDate:
+          description: The date that the archive was created.
+          type: datetime
+          readonly: true
+        Scripts:
+          description: A list that contains archived scripts.
+          type: array
+    CreateArchive:
+      type: object
+      description: Creates a new archive
+      properties:
+        Title:
+          description: The title of the archive to identify what it contains.
+          example: Archive of Flevoland Police station
+          type: string
+        Label:
+          description: Labels that identify the archive, these will be the keywords used to search for this archive.
+          example: Police,Station,Flevoland
+          type: string
+        MediaPhotoItems:
+          type: array
+          description: A list of all the photo items that are contained within the archive.
+        MediaVideoItems:
+          type: array
+          description: A list of all the video items that are contained within the archive.
+        MediaAudioItems:
+          type: array
+          description: A list of all the audio items that are contained within the archive.
+        Scripts:
+          description: A list that contains archived scripts.
+          type: array
+    EditArchive:
+      type: object
+      description: Edits an exisiting archive
+      properties:
+        Title:
+          description: The title of the archive to identify what it contains.
+          example: Archive of Flevoland Police station
+          type: string
+        Label:
+          description: Labels that identify the archive, these will be the keywords used to search for this archive.
+          example: Police,Station,Flevoland
+          type: string
+        MediaPhotoItems:
+          type: array
+          description: A list of all the photo items that are contained within the archive.
+        MediaVideoItems:
+          type: array
+          description: A list of all the video items that are contained within the archive.
+        MediaAudioItems:
+          type: array
+          description: A list of all the audio items that are contained within the archive.
+        Scripts:
+          description: A list that contains archived scripts.
+          type: array
+

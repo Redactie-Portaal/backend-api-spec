@@ -25,7 +25,20 @@ paths:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-
+  /api/v1/Archive/{id}:
+    get:
+      summary: gets a specific archive
+      tags:
+        - Archive
+      responses:
+        '200':
+          description: Archive
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Archive.yaml#/components/schemas/GetArchive
+              example:
+                $ref: examples/Response/GetArchive.json
   /api/v1/newsitem/{id}: 
     get: 
       summary: Get a specific newsitem
