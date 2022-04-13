@@ -1,0 +1,134 @@
+components:
+  schemas:
+    PhotoItem:
+      type: object
+      description: Gets the specified photo item
+      properties:
+        Id:
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Title:
+          description: The title of the photo
+          type: string
+        Folder:
+          description:
+          type: string
+        RepublishDate:
+          description: The republishing date
+          type: datetime
+        Rights:
+          description: Copyright of the photo
+          type: string
+        Camera:
+          description: Camera used to capture the photo
+          type: string
+        LastWords:
+          description: Last words of the photo
+          type: string
+        ProxyFile:
+          description:
+          type: string
+        Presentation:
+          description:
+          type: string
+        Location:
+          description:
+          type: location
+        Format:
+          description:
+          type: string
+        MediaLocation:
+          description:
+          type: uri
+        Image:
+          description:
+          type: string
+    VideoItem:
+      type: object
+      description: Gets the specified photo item
+      properties:
+        Id:
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Title:
+          description: The title of the photo
+          type: string
+        Folder:
+          description:
+          type: string
+        RepublishDate:
+          description: The republishing date
+          type: datetime
+        Rights:
+          description: Copyright of the photo
+          type: string
+        Camera:
+          description: Camera used to capture the photo
+          type: string
+        LastWords:
+          description: Last words of the photo
+          type: string
+        ProxyFile:
+          description:
+          type: string
+        Presentation:
+          description:
+          type: string
+        Location:
+          description:
+          type: location
+        Format:
+          description:
+          type: string
+        MediaLocation:
+          description:
+          type: uri
+        Image:
+          description:
+          type: string
+    AudioItem:
+      type: object
+      description: Gets the specified photo item
+      properties:
+        Id:
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Title:
+          description: The title of the photo
+          type: string
+        Folder:
+          description:
+          type: string
+        RepublishDate:
+          description: The republishing date
+          type: datetime
+        Rights:
+          description: Copyright of the photo
+          type: string
+        Camera:
+          description: Camera used to capture the photo
+          type: string
+        LastWords:
+          description: Last words of the photo
+          type: string
+        ProxyFile:
+          description:
+          type: string
+        Presentation:
+          description:
+          type: string
+        Location:
+          description:
+          type: location
+        Format:
+          description:
+          type: string
+        MediaLocation:
+          description:
+          type: uri
+        Image:
+          description:
+          type: string

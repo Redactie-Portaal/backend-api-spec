@@ -6,9 +6,9 @@ components:
       bearerFormat: JWT
       description: A token retrieved from `authd`. If the token contains an `aud` claim, then Clapy expects it to contain the value `clapy`, otherwise the token will be rejected. Tokens with no `aud` claim are also accepted.
 info:
-    title: API Specificatie Redactie portaal.
-    description: Dit document bevat de API specificaties van het Redactie portaal back-end.
-    version: 0.0.1
+  title: API Specificatie Redactie portaal.
+  description: Dit document bevat de API specificaties van het Redactie portaal back-end.
+  version: 0.0.1
 servers:
   - url: https://host/api/v1
 openapi: 3.0.3
@@ -19,33 +19,70 @@ paths:
       tags:
         - Dashboard
       responses:
-        '200':
+        "200":
           description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
           content:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
+  /api/v1/Archive/:
+    get:
+      summary: gets list of all archives
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing archives is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Archive.yaml#/components/schemas/Archive_List
+              example:
+                $ref: examples/Response/ArchiveList.json
   /api/v1/Archive/{id}:
     get:
       summary: gets a specific archive
       tags:
         - Archive
       responses:
-        '200':
-          description: Archive
+        "200":
+          description: A specific archive has been provided based on the ID.
           content:
             application/json:
               schema:
-                $ref: schemas/Archive.yaml#/components/schemas/GetArchive
+                $ref: schemas/Archive.yaml#/components/schemas/Archive
               example:
-                $ref: examples/Response/GetArchive.json
-  /api/v1/newsitem/{id}: 
-    get: 
+                $ref: examples/Response/Archive.json
+    delete:
+      summary: Deletes a specific archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified archive has been deleted.
+  /api/v1/Archive:
+    post:
+      summary: Create an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: An archive is created.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Archive.yaml#/components/schemas/CreateArchive
+            example:
+              $ref: examples/Request/CreateArchive.json
+  /api/v1/newsitem/{id}:
+    get:
       summary: Get a specific newsitem
       tags:
         - Newsitem
       responses:
-        '200':
+        "200":
           description: Newsitem information
           content:
             application/json:
@@ -58,7 +95,7 @@ paths:
       tags:
         - "Newsitem"
       responses:
-        '200':
+        "200":
           description: Updated newsitem
           content:
             application/json:
@@ -79,7 +116,7 @@ paths:
       tags:
         - Newsitem
       responses:
-        '200':
+        "200":
           description: Newsitem removed
   /api/v1/newsitem:
     post:
@@ -87,7 +124,7 @@ paths:
       tags:
         - Newsitem
       responses:
-        '201':
+        "201":
           description: Object created.
       requestBody:
         required: true
@@ -103,7 +140,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: List of plugins
           content:
             application/json:
@@ -117,7 +154,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: Information on export plugin
           content:
             application/json:
@@ -138,7 +175,7 @@ paths:
             example:
               $ref: examples/Response/ExportDestinationUpdate.json
       responses:
-        '200':
+        "200":
           description: Representation of the updated plugin.
           content:
             application/json:
@@ -152,7 +189,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: Object published.
       requestBody:
         required: true
@@ -164,43 +201,43 @@ paths:
     get:
       summary: Get list of /api/v1/Profiles/
       tags:
-       - Profile
+        - Profile
       responses:
-        '200':
+        "200":
           description: List of profiles
           content:
-           application/json:
-             example:
-               $ref: examples/Response/ProfileList.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/ProfileList
+            application/json:
+              example:
+                $ref: examples/Response/ProfileList.json
+              schema:
+                $ref: schemas/Profile.yaml#/components/schemas/ProfileList
   /api/v1/Profiles/{id}:
     get:
       summary: Get list of /api/v1/Profiles/
       tags:
-       - Profile
+        - Profile
       responses:
-        '200':
+        "200":
           description: Representation of profile
           content:
-           application/json:
-             example:
-               $ref: examples/Response/Profile.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/Profile
+            application/json:
+              example:
+                $ref: examples/Response/Profile.json
+              schema:
+                $ref: schemas/Profile.yaml#/components/schemas/Profile
     patch:
       summary: Update user details
       tags:
         - Profile
       responses:
-        '200':
+        "200":
           description: Updated user
           content:
-           application/json:
-             example:
-               $ref: examples/Response/Profile.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/Profile
+            application/json:
+              example:
+                $ref: examples/Response/Profile.json
+              schema:
+                $ref: schemas/Profile.yaml#/components/schemas/Profile
       requestBody:
         required: true
         content:

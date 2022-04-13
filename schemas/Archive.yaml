@@ -1,6 +1,6 @@
 components:
   schemas:
-    GetArchive:
+    Archive:
       type: object
       description: Gets the archive specified
       properties:
@@ -19,12 +19,18 @@ components:
         MediaPhotoItems:
           type: array
           description: A list of all the photo items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/PhotoItem
         MediaVideoItems:
           type: array
           description: A list of all the video items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/VideoItem
         MediaAudioItems:
           type: array
           description: A list of all the audio items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/AudioItem
         ArchivedDate:
           description: The date that the archive was created.
           type: datetime
@@ -32,6 +38,8 @@ components:
         Scripts:
           description: A list that contains archived scripts.
           type: array
+          items:
+            type: string
     CreateArchive:
       type: object
       description: Creates a new archive
@@ -56,28 +64,8 @@ components:
         Scripts:
           description: A list that contains archived scripts.
           type: array
-    EditArchive:
-      type: object
-      description: Edits an exisiting archive
-      properties:
-        Title:
-          description: The title of the archive to identify what it contains.
-          example: Archive of Flevoland Police station
-          type: string
-        Label:
-          description: Labels that identify the archive, these will be the keywords used to search for this archive.
-          example: Police,Station,Flevoland
-          type: string
-        MediaPhotoItems:
-          type: array
-          description: A list of all the photo items that are contained within the archive.
-        MediaVideoItems:
-          type: array
-          description: A list of all the video items that are contained within the archive.
-        MediaAudioItems:
-          type: array
-          description: A list of all the audio items that are contained within the archive.
-        Scripts:
-          description: A list that contains archived scripts.
-          type: array
-
+    Archive_List:
+      description: List of archives
+      type: array
+      items:
+        $ref: "#/components/schemas/Archive"
