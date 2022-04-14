@@ -68,6 +68,9 @@ components:
         FirstWords:
           description: First words of the video item.
           type: string
+        LastWords:
+          description: Last words of the video item.
+          type: string
         MediaLocation:
           description: The location the video item was stored.
           type: uri
@@ -88,6 +91,9 @@ components:
           $ref: Weather.yaml#/components/schemas/Weather
         FirstWords:
           description: First words of the audio item.
+          type: string
+        LastWords:
+          description: Last words of the audio item.
           type: string
         ProgramName: 
           description: Program name that is associated with the audio item.
@@ -128,9 +134,6 @@ components:
           type: string
         Camera:
           description: Camera used to record the media item.
-          type: string
-        LastWords:
-          description: Last words of the media item.
           type: string
         ProxyFile:
           description: ###

@@ -5,7 +5,7 @@ components:
       description: Gets the location specified
       properties:
         Id: 
-          description: A user's unique GUID
+          description: A source's unique GUID
           type: string
           readonly: true
         Name:

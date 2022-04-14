@@ -1,7 +1,7 @@
 {
   "Id": "fa33b267-4c84-45d8-a6d3-b15b8f1f7724",
   "Title": "string",
-  "Label": "string",
+  "Label": ["label1","label2","label3"],
   "MediaPhotoItems": [
     {
       "Id": "cf5a0033-37f1-49df-92f4-816352ac8cba",

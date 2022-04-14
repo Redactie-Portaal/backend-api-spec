@@ -62,9 +62,8 @@ components:
         Source:
           type: string
           description: Source?
-        BodyDescription:
-          type: string
-          description: Body of the newsitem, the text
+        Body:
+          $ref: '../schemas/Body.yaml#/components/schemas/Body'
         ContactDetails:
           type: string
           description: Contactdetails for the newsitem
@@ -108,9 +107,8 @@ components:
         Source:
           type: string
           description: Source?
-        BodyDescription:
-          type: string
-          description: Body of the newsitem, the text
+        Body:
+          $ref: '../schemas/Body.yaml#/components/schemas/Body'
         ContactDetails:
           type: string
           description: Contactdetails for the newsitem

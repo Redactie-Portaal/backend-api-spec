@@ -19,7 +19,7 @@
   "Format": "MP3",
   "AudioUrl": "Server/Location/AudioFiles",
   "Duration": "15M20S",
-  "Weather": ["Sunny"],
+  "Weather": "Sunny",
   "FirstWords": "Russia something something",
   "ProgramName": "Program name"
 }

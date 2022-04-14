@@ -9,7 +9,13 @@
       "Uri": "Uri of the source",
       "Date": "2022-04-04T08:25:22.465Z"
   },
-  "Body": null,
+  "Body": {
+    "Id": "5f6a1acd-b942-46ec-bd2b-af50d55adfcc",
+    "Description": "Description of the body",
+    "ShortDescription": "shorter description of the body",
+    "Text": "text to fulfill your desires"
+  }
+  ,
   "ContactDetails": "Contact details",
   "LocationDetails": "Location details",
   "ProdutionDate": "2022-04-04T08:25:22.465Z",
@@ -88,7 +94,13 @@
       "Uri": "Uri of the source",
       "Date": "2022-04-04T08:25:22.465Z"
   },
-  "Body": null,
+  "Body": {
+    "Id": "5f6a1acd-b942-46ec-bd2b-af50d55adfcc",
+    "Description": "Description of the body",
+    "ShortDescription": "shorter description of the body",
+    "Text": "text to fulfill your desires"
+  }
+  ,
   "ContactDetails": "Contact details",
   "LocationDetails": "Location details",
   "ProdutionDate": "2022-04-04T08:25:22.465Z",
@@ -132,7 +144,32 @@
       "FirstWords":"firstword",
       "MediaLocation": "Server/Location/VideoFiles"
   },
-  "Audio": null,
+  "Audio": {
+    "Id": "729267df-2c67-42ec-86d0-e8c9f0293f9c",
+    "Title": "Reporter Lelystad speaks about Russia",
+    "Folder": "Folder",
+    "RepublishDate": "13-03-2021T12:05:12.411Z",
+    "Rights": "Rights",
+    "Camera": "Camera type",
+    "LastWords": "Russia has been weird",
+    "ProxyFile": "Proxy file",
+    "Location": {
+      "Name": "Omroep Flevoland",
+      "City": "Lelystad",
+      "Province": "Flevoland",
+      "Street": "Larserpoortweg 40",
+      "Zip": "8218 NK",
+      "Latitude": "52.47451806930726",
+      "Longitude": "5.50962532716468"
+    },
+    "Format": "MP3",
+    "AudioUrl": "Server/Location/AudioFiles",
+    "Duration": "15M20S",
+    "Weather": "Sunny",
+    "FirstWords": "Russia something something",
+    "ProgramName": "Program name"
+  }
+  ,
   "Photo": {
       "Id": "6561269e-3026-422a-905d-1954aaaf2780",
       "Title": "Reporter Lelystad speaks about Russia",

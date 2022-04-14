@@ -5,7 +5,7 @@ components:
       description: Gets the archive specified
       properties:
         Id:
-          description: A user's unique GUID
+          description: An archive's unique GUID
           type: string
           readonly: true
         Title:
@@ -14,8 +14,9 @@ components:
           type: string
         Label:
           description: Labels that identify the archive, these will be the keywords used to search for this archive.
-          example: Police,Station,Flevoland
-          type: string
+          type: array
+          items:
+            type: string
         MediaPhotoItems:
           type: array
           description: A list of all the photo items that are contained within the archive.
