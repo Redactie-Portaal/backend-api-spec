@@ -1,0 +1,36 @@
+name: Generate api spec
+
+# Controls when the workflow will run
+on: [pull_request]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Build
+        run: |
+          npm i
+          npm run generate-html
+      - name: html to pdf
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./output/Api_Spec.html
+          outputFile: ./output/Api_Spec.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+      - uses: actions/upload-artifact@v2
+        with:
+         name: Api Spec
+         path: ./output/Api_Spec.html
+      - uses: actions/upload-artifact@v2
+        with:
+         name: Api Spec PDF
+         path: ./output/Api_Spec.pdf
