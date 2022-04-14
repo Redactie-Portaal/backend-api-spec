@@ -6,53 +6,220 @@ components:
       bearerFormat: JWT
       description: A token retrieved from `authd`. If the token contains an `aud` claim, then Clapy expects it to contain the value `clapy`, otherwise the token will be rejected. Tokens with no `aud` claim are also accepted.
 info:
-    title: API Specificatie Redactie portaal.
-    description: Dit document bevat de API specificaties van het Redactie portaal back-end.
-    version: 0.0.1
+  title: API Specificatie Redactie portaal.
+  description: Dit document bevat de API specificaties van het Redactie portaal back-end.
+  version: 0.0.1
 servers:
   - url: https://host/api/v1
 openapi: 3.0.3
 paths:
-  /api/v1/dashboard:
+  /api/v1/Archive/:
     get:
-      summary: Dashboard items ophalen
+      summary: gets list of all archives
       tags:
-        - Dashboard
+        - Archive
       responses:
-        '200':
-          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
+        "200":
+          description: A list of all existing archives is provided.
           content:
             application/json:
               schema:
-                $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-
-  /api/v1/newsitem/{id}: 
-    get: 
+                $ref: schemas/Archive.yaml#/components/schemas/Archive_List
+              example:
+                $ref: examples/Response/ArchiveList.json
+  /api/v1/Archive/{id}:
+    get:
+      summary: gets a specific archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A specific archive has been provided based on the ID.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Archive.yaml#/components/schemas/Archive
+              example:
+                $ref: examples/Response/Archive.json
+    delete:
+      summary: Deletes a specific archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified archive has been deleted.
+    put:
+      summary: Edits the archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The archive has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Archive.yaml#/components/schemas/Archive
+  /api/v1/Archive:
+    post:
+      summary: Create an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: An archive is created.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Archive.yaml#/components/schemas/Archive
+            example:
+              $ref: examples/Request/CreateArchive.json
+  /api/v1/Archive/{id}/VideoItems:
+    put:
+      summary: Add a videofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A videofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem
+            example:
+              $ref: examples/Response/AddVideoItemToArchive.json
+    get:
+      summary: Gets list of all videoitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing videoitems within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem_List
+              example:
+                $ref: examples/Response/VideoList.json
+  /api/v1/Archive/{id}/AudioItems:
+    put:
+      summary: Add an audiofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: An audiofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem
+            example:
+              $ref: examples/Response/AddAudioItemToArchive.json
+    get:
+      summary: Gets list of all audioitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing audioitems within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem_List
+              example:
+                $ref: examples/Response/AudioList.json
+  /api/v1/Archive/{id}/PhotoItems:
+    put:
+      summary: Add a photofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A photofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem
+            example:
+              $ref: examples/Response/AddPhotoItemToArchive.json
+    get:
+      summary: Gets list of all photoitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing photofiles within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem_List
+              example:
+                $ref: examples/Response/PhotoList.json
+  /api/v1/Archive/{id}/Stories:
+    put:
+      summary: Add a story to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A story is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
+            example:
+              $ref: examples/Response/AddNewsItemToArchive.json
+    get:
+      summary: Gets list of all stories within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing stories within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem_List
+              example:
+                $ref: examples/Response/NewsItemList.json
+  /api/v1/newsitem/{id}:
+    get:
       summary: Get a specific newsitem
       tags:
         - Newsitem
       responses:
-        '200':
+        "200":
           description: Newsitem information
           content:
             application/json:
               schema:
-                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
               example:
-                $ref: examples/Response/GetNewsItem.json
+                $ref: examples/Response/NewsItem.json
     patch:
       summary: Edits newsitem
       tags:
         - "Newsitem"
       responses:
-        '200':
+        "200":
           description: Updated newsitem
           content:
             application/json:
               schema:
-                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
               example:
-                $ref: examples/Response/GetNewsItem.json
+                $ref: examples/Response/NewsItem.json
       requestBody:
         required: true
         content:
@@ -66,7 +233,7 @@ paths:
       tags:
         - Newsitem
       responses:
-        '200':
+        "200":
           description: Newsitem removed
   /api/v1/newsitem:
     post:
@@ -74,7 +241,7 @@ paths:
       tags:
         - Newsitem
       responses:
-        '201':
+        "201":
           description: Object created.
       requestBody:
         required: true
@@ -90,7 +257,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: List of plugins
           content:
             application/json:
@@ -104,7 +271,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: Information on export plugin
           content:
             application/json:
@@ -125,7 +292,7 @@ paths:
             example:
               $ref: examples/Response/ExportDestinationUpdate.json
       responses:
-        '200':
+        "200":
           description: Representation of the updated plugin.
           content:
             application/json:
@@ -139,7 +306,7 @@ paths:
       tags:
         - Export plugins
       responses:
-        '200':
+        "200":
           description: Object published.
       requestBody:
         required: true

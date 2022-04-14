@@ -1,0 +1,18 @@
+components:
+  schemas:
+    Body:
+      type: object
+      description:
+      properties:
+        Id:
+          description: A body's unique GUID
+          type: string
+        Description:
+          description: The description of the text within the body.
+          type: string
+        ShortDescription:
+          description: Short way to describe the text within the body.
+          type: string
+        Text:
+          description: Text to be used within a news item.
+          type: string

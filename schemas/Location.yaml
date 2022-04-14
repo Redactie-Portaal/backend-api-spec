@@ -1,0 +1,27 @@
+components:
+  schemas:
+    Location:
+      type: object
+      description: Gets the location specified
+      properties:
+        Name: 
+          description: Name of the location.
+          type: string
+        City:
+          description: City name.
+          type: string 
+        Province: 
+          description: Province name.
+          type: string
+        Street: 
+          description: Street name.
+          type: string
+        Zip: 
+          description: Zipcode.
+          type: string
+        Latitude:
+          description: Latitude in decimals.
+          type: string
+        Longitude:
+          description: Longitude in decimals.
+          type: string

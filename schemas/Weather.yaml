@@ -1,0 +1,11 @@
+components:
+  schemas:
+    Weather:
+      type: array
+      description: the weather
+      properties:
+        Weather:
+          items:
+            enum:
+              - Sunny
+            type: string

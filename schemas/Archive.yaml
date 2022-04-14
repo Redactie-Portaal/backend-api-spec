@@ -1,0 +1,48 @@
+components:
+  schemas:
+    Archive:
+      type: object
+      description: Gets the archive specified
+      properties:
+        Id:
+          description: An archive's unique GUID
+          type: string
+          readonly: true
+        Title:
+          description: The title of the archive to identify what it contains.
+          example: Archive of Flevoland Police station
+          type: string
+        Label:
+          description: Labels that identify the archive, these will be the keywords used to search for this archive.
+          type: array
+          items:
+            type: string
+        MediaPhotoItems:
+          type: array
+          description: A list of all the photo items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/PhotoItem
+        MediaVideoItems:
+          type: array
+          description: A list of all the video items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/VideoItem
+        MediaAudioItems:
+          type: array
+          description: A list of all the audio items that are contained within the archive.
+          items:
+            $ref: MediaItem.yaml#/components/schemas/AudioItem
+        ArchivedDate:
+          description: The date that the archive was created.
+          type: datetime
+          readonly: true
+        Scripts:
+          description: A list that contains archived scripts.
+          type: array
+          items:
+            type: string
+    Archive_List:
+      description: List of archives
+      type: array
+      items:
+        $ref: "#/components/schemas/Archive"
