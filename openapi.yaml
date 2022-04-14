@@ -20,48 +20,70 @@ paths:
         - Dashboard
       responses:
         '200':
+          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
           content:
             application/json:
               schema:
                 $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
-          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
 
-  /api/v1/item/{id}: 
+  /api/v1/newsitem/{id}: 
     get: 
-      summary: Get specific item
+      summary: Get a specific newsitem
       tags:
-        - News item
+        - Newsitem
       responses:
         '200':
+          description: Newsitem information
           content:
             application/json:
               schema:
-                $ref: schemas/Dashboard.yaml#/components/schemas/Item
-                parameters: 
-                - name: id
-                in: path
-                required: true 
-          description: Dit is een voorbeeld van hoe een specifieke pagina geopend kan worden.
-  /api/v1/item:
-    post:
-      summary: Create an item
+                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+              example:
+                $ref: examples/Response/GetNewsItem.json
+    patch:
+      summary: Edits newsitem
       tags:
-        - News item
+        - "Newsitem"
       responses:
-        '201':
-          description: Object created.
+        '200':
+          description: Updated newsitem
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+              example:
+                $ref: examples/Response/GetNewsItem.json
       requestBody:
-        description: Dit is een voorbeeld van hoe je een item aan kunt maken met een requestbody.
         required: true
         content:
           application/json:
             schema:
-              $ref: schemas/Dashboard.yaml#/components/schemas/Item
+              $ref: schemas/Newsitem.yaml#/components/schemas/EditNewsItem
             example:
-              id: 1
-              name: Bitcoin is weer gedaald...
-              creationDate: 15:16 21-03-2022
-              author: Henk de Jong
+              $ref: examples/Request/NewsitemEdit.json
+    delete:
+      summary: Deletes a specific newsitem
+      tags:
+        - Newsitem
+      responses:
+        '200':
+          description: Newsitem removed
+  /api/v1/newsitem:
+    post:
+      summary: Create a newsitem
+      tags:
+        - Newsitem
+      responses:
+        '201':
+          description: Object created.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Newsitem.yaml#/components/schemas/ItemCreation
+            example:
+              $ref: examples/Request/CreateNewsItem.json
   /api/v1/ExportDestinations:
     get:
       summary: Get list of export destinations
@@ -237,3 +259,59 @@ get:
               $ref: examples/Request/ProfileEdit.json
             schema:
               $ref: schemas/Profile.yaml#/components/schemas/Profile
+  /api/v1/CalendarItems:
+    get:
+      summary: Get list of calendar items
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: List of calendar items
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItemList.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItemList
+  /api/v1/CalendarItems/{id}:
+    get:
+      summary: Get specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: Representation of the calendar item
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItem.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+    delete:
+      summary: Delete specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '201':
+          description: Accepted, but no content
+    patch:
+      summary: Update specific calendar item
+      tags:
+       - Calendar
+      responses:
+        '200':
+          description: Representation of the updated calendar item
+          content:
+           application/json:
+             example:
+               $ref: examples/Response/CalendarItem.json
+             schema:
+               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+           example:
+            $ref: examples/Request/CalendarItemEdit.json
+           schema:
+            $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem

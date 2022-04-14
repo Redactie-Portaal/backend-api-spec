@@ -1,0 +1,137 @@
+components:
+  schemas:
+    ItemCreation:
+      description: Newsitem
+      type: object
+      properties:
+        Title:
+          type: string
+          description: Title of the newsitem
+        Author:
+          type: string
+          description: Name of the author of the newsitem
+        Source:
+          type: string
+          description: Source?
+        BodyDescription:
+          type: string
+          description: Body of the newsitem, the text
+        ContactDetails:
+          type: string
+          description: Contactdetails for the newsitem
+        LocationDetails:
+          type: string
+          description: Locationdetails for the newsitem
+        ProdutionDate:
+          type: string
+          description: Datetime when the newsitem was finished
+        EndDate:
+          type: string
+          description: Date when the newsitem has to be published
+        Category:
+          type: string
+          description: The category of the newsitem
+        Region:
+          type: string
+          description: The region of the newsitem
+        Video:
+          type: string
+          description: Video included with the newsitem
+        Audio:
+          type: string
+          description: Audio included with the newsitem
+        Photo:
+          type: string
+          description: Photos included with the newsitem
+    GetNewsItem:
+      description: Gets a specific newsitem
+      type: object
+      properties:
+        Id:
+          type: string
+          description: Id of the newsitem
+        Title:
+          type: string
+          description: Title of the newsitem
+        Status:
+          type: integer
+          description: Status of the newsitem
+        Author:
+          type: string
+          description: Name of the author of the newsitem
+        Source:
+          type: string
+          description: Source?
+        BodyDescription:
+          type: string
+          description: Body of the newsitem, the text
+        ContactDetails:
+          type: string
+          description: Contactdetails for the newsitem
+        LocationDetails:
+          type: string
+          description: Locationdetails for the newsitem
+        ProdutionDate:
+          type: string
+          description: Datetime when the newsitem was finished
+        EndDate:
+          type: string
+          description: Date when the newsitem has to be published
+        Category:
+          type: string
+          description: The category of the newsitem
+        Region:
+          type: string
+          description: The region of the newsitem
+        Video:
+          type: string
+          description: Video included with the newsitem
+        Audio:
+          type: string
+          description: Audio included with the newsitem
+        Photo:
+          type: string
+          description: Photos included with the newsitem
+    EditNewsItem:
+      description: Newsitem
+      type: object
+      properties:
+        Title:
+          type: string
+          description: Title of the newsitem
+        Status:
+          type: string
+          description: The status of the newsitem
+        Author:
+          type: string
+          description: Name of the author of the newsitem
+        Source:
+          type: string
+          description: Source?
+        BodyDescription:
+          type: string
+          description: Body of the newsitem, the text
+        ContactDetails:
+          type: string
+          description: Contactdetails for the newsitem
+        LocationDetails:
+          type: string
+          description: Locationdetails for the newsitem
+        EndDate:
+          type: string
+          description: Date when the newsitem has to be published
+        Category:
+          type: string
+          description: The category of the newsitem
+        Region:
+          type: string
+          description: The region of the newsitem
+        Video:
+          type: string
+          description: Video included with the newsitem
+        Audio:
+          type: string
+          description: Audio included with the newsitem
+        Photo:
+          type: string
+          description: Photos included with the newsitem 
