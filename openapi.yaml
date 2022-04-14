@@ -13,18 +13,6 @@ servers:
   - url: https://host/api/v1
 openapi: 3.0.3
 paths:
-  /api/v1/dashboard:
-    get:
-      summary: Dashboard items ophalen
-      tags:
-        - Dashboard
-      responses:
-        "200":
-          description: Dit is een voorbeeld van hoe items van opgehaald worden voor het dashboard.
-          content:
-            application/json:
-              schema:
-                $ref: schemas/Dashboard.yaml#/components/schemas/Dashboard
   /api/v1/Archive/:
     get:
       summary: gets list of all archives
@@ -60,6 +48,19 @@ paths:
       responses:
         "200":
           description: The specified archive has been deleted.
+    put:
+      summary: Edits the archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The archive has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Archive.yaml#/components/schemas/Archive
   /api/v1/Archive:
     post:
       summary: Create an archive
@@ -73,7 +74,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: schemas/Archive.yaml#/components/schemas/CreateArchive
+              $ref: schemas/Archive.yaml#/components/schemas/Archive
             example:
               $ref: examples/Request/CreateArchive.json
   /api/v1/Archive/{id}/VideoItems:

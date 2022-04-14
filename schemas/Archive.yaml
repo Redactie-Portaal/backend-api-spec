@@ -40,30 +40,6 @@ components:
           type: array
           items:
             type: string
-    CreateArchive:
-      type: object
-      description: Creates a new archive
-      properties:
-        Title:
-          description: The title of the archive to identify what it contains.
-          example: Archive of Flevoland Police station
-          type: string
-        Label:
-          description: Labels that identify the archive, these will be the keywords used to search for this archive.
-          example: Police,Station,Flevoland
-          type: string
-        MediaPhotoItems:
-          type: array
-          description: A list of all the photo items that are contained within the archive.
-        MediaVideoItems:
-          type: array
-          description: A list of all the video items that are contained within the archive.
-        MediaAudioItems:
-          type: array
-          description: A list of all the audio items that are contained within the archive.
-        Scripts:
-          description: A list that contains archived scripts.
-          type: array
     Archive_List:
       description: List of archives
       type: array

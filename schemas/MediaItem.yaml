@@ -1,216 +1,143 @@
 components:
   schemas:
     PhotoItem:
+      allOf:     # inherits the media item template
+        - $ref: '#/components/schemas/MediaItemTemplate'
+        - type: object
       type: object
-      description: Gets the specified photo item
+      description: Gets the specified photo item.
       properties:
-        Id:
-          description: A user's unique GUID
-          type: string
-          readonly: true
-        Title:
-          description: The title of the photo
-          type: string
-        Folder:
-          description:
-          type: string
-        RepublishDate:
-          description: The republishing date
-          type: datetime
-        Rights:
-          description: Copyright of the photo
-          type: string
-        Camera:
-          description: Camera used to capture the photo
-          type: string
-        LastWords:
-          description: Last words of the photo
-          type: string
-        ProxyFile:
-          description:
-          type: string
-        Presentation:
-          description:
-          type: string
-        Location:
-          description:
-          type: location
-        Format:
-          description:
-          type: string
         MediaLocation:
-          description:
+          description: The location the media is stored.
           type: uri
         Image:
-          description:
+          description: The image string based on a base64 format.
           type: string
     VideoItem:
+      allOf:     # inherits the media item template
+        - $ref: '#/components/schemas/MediaItemTemplate'
+        - type: object
       type: object
-      description: Gets the specified video item
+      description: Gets the specified video item.
       properties:
-        Id:
-          description: A user's unique GUID
-          type: string
-          readonly: true
-        Title:
-          description: The title of the photo
-          type: string
-        Folder:
-          description:
-          type: string
-        RepublishDate:
-          description: The republishing date
-          type: datetime
-        Rights:
-          description: Copyright of the photo
-          type: string
-        Camera:
-          description: Camera used to capture the photo
-          type: string
-        LastWords:
-          description: Last words of the photo
-          type: string
-        ProxyFile:
-          description:
-          type: string
-        Presentation:
-          description:
-          type: string
-        Location:
-          description:
-          type: object
-        Format:
-          description:
-          type: string
         Reporter:
-          description:
+          description: The reporter that is associated with this video item.
           type: string
         Sound:
-          description:
+          description: The sound that is linked to this video item.
           type: string
         Editor:
-          description:
-          type: string
-        lastPicture:
-          description:
+          description: The editor of this video item.
           type: string
         Keywords:
-          description:
+          description: The keywords that are attached to this video item to be easier to find within the archive.
           type: array
           items:
             type: string
         VoiceOver:
-          description:
+          description: The voice over that is attached to the video item.
           type: string
         Description:
-          description:
+          description: The description of the video item.
           type: string
-        ProgramDate:
-          description:
-          type: datetime
         ItemName:
-          description:
+          description: The name of the video item.
           type: string
         EPG:
-          description:
+          description: ###
           type: string
         Duration:
-          description:
-          type: string
-        ArchiveMaterial:
-          description:
+          description: The length of the video item.
           type: string
         Weather:
-          description:
-          type: object #todo insert weather schema reference
+          $ref: Weather.yaml#/components/schemas/Weather
         Producer:
-          description:
+          description: The producer of the video item.
           type: string
         Director:
-          description:
+          description: The director of the video item.
           type: string
         Guests:
-          description:
+          description: The quests that are involved in the video item.
           type: array
           items:
             type: string
-        FirstPicture:
-          description:
-          type: string
-        ProgramName:
-          description:
+        ProgramName: 
+          description: Program name that is associated with the video item.
           type: string
         FirstWords:
-          description:
+          description: First words of the video item.
           type: string
         MediaLocation:
-          description:
+          description: The location the video item was stored.
           type: uri
     AudioItem:
+      allOf:     # inherits the media item template
+        - $ref: '#/components/schemas/MediaItemTemplate'
+        - type: object
       type: object
       description: Gets the specified audio item
       properties:
-        Id:
-          description: A user's unique GUID
-          type: string
-          readonly: true
-        Title:
-          description: The title of the audio
-          type: string
-        Folder:
-          description:
-          type: string
-        RepublishDate:
-          description: The republishing date
-          type: datetime
-        Rights:
-          description: Copyright of the audio
-          type: string
-        Camera:
-          description: Camera used to capture the audio
-          type: string
-        LastWords:
-          description: Last words of the audio
-          type: string
-        ProxyFile:
-          description:
-          type: string
-        Presentation:
-          description:
-          type: string
-        Location:
-          description:
-          type: object
-        Format:
-          description:
-          type: string
         AudioUrl:
-          description:
+          description: The url of the audio item.
           type: uri
         Duration:
-          description:
+          description: The length of the audio item.
           type: string
         Weather:
-          description:
-          type: object
+          $ref: Weather.yaml#/components/schemas/Weather
         FirstWords:
-          description:
+          description: First words of the audio item.
           type: string
-        ProgramName:
-          description:
+        ProgramName: 
+          description: Program name that is associated with the audio item.
           type: string
     PhotoItem_List:
-      description: List of photos
+      description: Gets a list of photo items.
       type: array
       items:
         $ref: "#/components/schemas/PhotoItem"
     VideoItem_List:
-      description: List of videos
+      description: Gets a list of video items.
       type: array
       items:
         $ref: "#/components/schemas/VideoItem"
     AudioItem_List:
-      description: List of audios
+      description: Gets a list of audio items.
       type: array
       items:
         $ref: "#/components/schemas/AudioItem"
+    MediaItemTemplate:
+      description: Template to create inheritance within the media items to reduce clutter.
+      type: object
+      properties:
+        Id:
+          type: string
+          readonly: true
+        Title:
+          description: The title of the media item.
+          type: string
+        Folder:
+          description: The folder the media item is contained within.
+          type: string
+        RepublishDate:
+          description: The date the media item has been republished.
+          type: datetime
+        Rights:
+          description: Copyright of the media item.
+          type: string
+        Camera:
+          description: Camera used to record the media item.
+          type: string
+        LastWords:
+          description: Last words of the media item.
+          type: string
+        ProxyFile:
+          description: ###
+          type: string
+        Location:
+          description: The phyiscal location the media item was recorded in.
+          type: location
+        Format:
+          description: The file format the media item is based on.
+          type: string

@@ -7,12 +7,19 @@
   "Camera": "Camera type",
   "LastWords": "Russia has been weird",
   "ProxyFile": "Proxy file",
-  "Presentation": "Presentation",
-  "Location": {},
+  "Location": {
+    "Name": "Omroep Flevoland",
+    "City": "Lelystad",
+    "Province": "Flevoland",
+    "Street": "Larserpoortweg 40",
+    "Zip": "8218 NK",
+    "Latitude": "52.47451806930726",
+    "Longitude": "5.50962532716468"
+  },
   "Format": "MP3",
   "AudioUrl": "Server/Location/AudioFiles",
   "Duration": "15M20S",
-  "Weather": {},
+  "Weather": ["Sunny"],
   "FirstWords": "Russia something something",
   "ProgramName": "Program name"
 }

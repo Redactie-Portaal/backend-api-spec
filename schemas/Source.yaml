@@ -1,0 +1,19 @@
+components:
+  schemas:
+    Source:
+      type: object
+      description: Gets the location specified
+      properties:
+        Id: 
+          description: A user's unique GUID
+          type: string
+          readonly: true
+        Name:
+          description: The name of the source
+          type: string
+        Uri:
+          description: the uri of the source
+          type: string
+        Date:
+          description: the date of the source
+          type: datetime

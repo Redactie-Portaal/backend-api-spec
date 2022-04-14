@@ -1,39 +1,316 @@
 [
-    {
-        "Id": "fa33b267-4c84-45d8-a6d3-b15b8f1f7724",
-        "Title": "Bitcoin",
-        "Label": "Bitcoin,Crypto,NFT,Ethereum",
-        "MediaPhotoItems": [
-            "Photo1",
-            "Photo2",
-            "Photo3"
-        ],
-        "MediaVideoItems": [
-            "Video1"
-        ],
-        "MediaAudioItems": [],
-        "ArchivedDate": "2022-04-11T13:08:12.465Z",
-        "Scripts": [
-            "Script1"
-        ]
-    },
-    {
-        "Id": "da33b267-4c84-66d8-a6b5-b15b8f1f5524",
-        "Title": "Policeman case Flevoland",
-        "Label": "Police,Flevoland,Crime",
-        "MediaPhotoItems": [
-            "Photo1",
-            "Photo3"
-        ],
-        "MediaVideoItems": [
-            "Video4"
-        ],
-        "MediaAudioItems": [
-            "Audio5"
-        ],
-        "ArchivedDate": "2022-03-11T13:08:12.465Z",
-        "Scripts": [
-            "Script2"
-        ]
-    }
+  {
+    "Id": "fa33b267-4c84-45d8-a6d3-b15b8f1f7724",
+    "Title": "string",
+    "Label": "string",
+    "MediaPhotoItems": [
+      {
+        "Id": "cf5a0033-37f1-49df-92f4-816352ac8cba",
+        "Title": "Park interview flevoland",
+        "Folder": "Folder",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Park was very interesting.",
+        "ProxyFile": "Proxy file",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        },
+        "Format": "PNG",
+        "MediaLocation": "Server/Location/PhotoFiles",
+        "Image": "Base64 string representing image"
+      },
+      {
+        "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+        "Title": "Reporter Lelystad speaks about Russia",
+        "Folder": "Folder",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Russia has been weird",
+        "ProxyFile": "Proxy file",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        },
+        "Format": "PNG",
+        "MediaLocation": "Server/Location/PhotoFiles",
+        "Image": "Base64 string representing image"
+      }
+    ],
+    "MediaVideoItems": [
+      {
+        "Id": "1a21be66-b5f0-4adc-928b-5f64a7b753de",
+        "Title": "Park interview flevoland",
+        "Folder": "Park",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Park was very interesting.",
+        "ProxyFile": "Proxyfile",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        }
+      }
+    ],
+    "MediaAudioItems": null,
+    "ArchivedDate": "2022-04-11T13:08:12.465Z",
+    "Scripts": [
+      {
+        "Id": "46a447b4-f53a-4483-985a-fb90f0fa8483",
+        "Title": "Park veel te druk in Flevoland",
+        "Status": 1,
+        "Author": "Author name",
+        "Source": {
+          "Id": "e5710d1c-2689-43f7-92e0-3be379e7614d",
+          "Name": "Source name",
+          "Uri": "Uri of the source",
+          "Date": "2022-04-04T08:25:22.465Z"
+        },
+        "Body": null,
+        "ContactDetails": "Contact details",
+        "LocationDetails": "Location details",
+        "ProdutionDate": "2022-04-04T08:25:22.465Z",
+        "EndDate": "2022-04-04T08:25:22.465Z",
+        "Category": 1,
+        "Region": 1,
+        "Video": {
+          "Id": "1a21be66-b5f0-4adc-928b-5f64a7b753de",
+          "Title": "Park interview flevoland",
+          "Folder": "Park",
+          "RepublishDate": "13-03-2021T12:05:12.411Z",
+          "Rights": "Rights",
+          "Camera": "Camera type",
+          "LastWords": "Park was very interesting.",
+          "ProxyFile": "Proxyfile",
+          "Location": {
+            "Name": "Omroep Flevoland",
+            "City": "Lelystad",
+            "Province": "Flevoland",
+            "Street": "Larserpoortweg 40",
+            "Zip": "8218 NK",
+            "Latitude": "52.47451806930726",
+            "Longitude": "5.50962532716468"
+          },
+          "Format": "MP4",
+          "Reporter": "Reporter Name",
+          "Sound": "Sound",
+          "Editor": "Editor Name",
+          "Keywords": ["keyword1", "keyword2", "keyword3"],
+          "VoiceOver": "",
+          "Description": "",
+          "ItemName": "ParkInterviewFlevo",
+          "EPG": "EPG",
+          "Duration": "20M15S",
+          "Weather": ["Sunny"],
+          "Producer": "Producer Name",
+          "Director": "Director Name",
+          "Guests": ["guest1", "guest2", "guest3"],
+          "ProgramName": "programname",
+          "FirstWords": "firstword",
+          "MediaLocation": "Server/Location/VideoFiles"
+        },
+        "Audio": null,
+        "Photo": {
+          "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+          "Title": "Reporter Lelystad speaks about Russia",
+          "Folder": "Folder",
+          "RepublishDate": "13-03-2021T12:05:12.411Z",
+          "Rights": "Rights",
+          "Camera": "Camera type",
+          "LastWords": "Russia has been weird",
+          "ProxyFile": "Proxy file",
+          "Location": {
+            "Name": "Omroep Flevoland",
+            "City": "Lelystad",
+            "Province": "Flevoland",
+            "Street": "Larserpoortweg 40",
+            "Zip": "8218 NK",
+            "Latitude": "52.47451806930726",
+            "Longitude": "5.50962532716468"
+          },
+          "Format": "PNG",
+          "MediaLocation": "Server/Location/PhotoFiles",
+          "Image": "Base64 string representing image"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "fa33b267-4c84-45d8-a6d3-b15b8f1f7724",
+    "Title": "string",
+    "Label": "string",
+    "MediaPhotoItems": [
+      {
+        "Id": "cf5a0033-37f1-49df-92f4-816352ac8cba",
+        "Title": "Park interview flevoland",
+        "Folder": "Folder",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Park was very interesting.",
+        "ProxyFile": "Proxy file",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        },
+        "Format": "PNG",
+        "MediaLocation": "Server/Location/PhotoFiles",
+        "Image": "Base64 string representing image"
+      },
+      {
+        "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+        "Title": "Reporter Lelystad speaks about Russia",
+        "Folder": "Folder",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Russia has been weird",
+        "ProxyFile": "Proxy file",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        },
+        "Format": "PNG",
+        "MediaLocation": "Server/Location/PhotoFiles",
+        "Image": "Base64 string representing image"
+      }
+    ],
+    "MediaVideoItems": [
+      {
+        "Id": "1a21be66-b5f0-4adc-928b-5f64a7b753de",
+        "Title": "Park interview flevoland",
+        "Folder": "Park",
+        "RepublishDate": "13-03-2021T12:05:12.411Z",
+        "Rights": "Rights",
+        "Camera": "Camera type",
+        "LastWords": "Park was very interesting.",
+        "ProxyFile": "Proxyfile",
+        "Presentation": "Presentation",
+        "Location": {
+          "Name": "Omroep Flevoland",
+          "City": "Lelystad",
+          "Province": "Flevoland",
+          "Street": "Larserpoortweg 40",
+          "Zip": "8218 NK",
+          "Latitude": "52.47451806930726",
+          "Longitude": "5.50962532716468"
+        }
+      }
+    ],
+    "MediaAudioItems": null,
+    "ArchivedDate": "2022-04-11T13:08:12.465Z",
+    "Scripts": [
+      {
+        "Id": "46a447b4-f53a-4483-985a-fb90f0fa8483",
+        "Title": "Park veel te druk in Flevoland",
+        "Status": 1,
+        "Author": "Author name",
+        "Source": {
+          "Id": "e5710d1c-2689-43f7-92e0-3be379e7614d",
+          "Name": "Source name",
+          "Uri": "Uri of the source",
+          "Date": "2022-04-04T08:25:22.465Z"
+        },
+        "Body": null,
+        "ContactDetails": "Contact details",
+        "LocationDetails": "Location details",
+        "ProdutionDate": "2022-04-04T08:25:22.465Z",
+        "EndDate": "2022-04-04T08:25:22.465Z",
+        "Category": 1,
+        "Region": 1,
+        "Video": {
+          "Id": "1a21be66-b5f0-4adc-928b-5f64a7b753de",
+          "Title": "Park interview flevoland",
+          "Folder": "Park",
+          "RepublishDate": "13-03-2021T12:05:12.411Z",
+          "Rights": "Rights",
+          "Camera": "Camera type",
+          "LastWords": "Park was very interesting.",
+          "ProxyFile": "Proxyfile",
+          "Location": {
+            "Name": "Omroep Flevoland",
+            "City": "Lelystad",
+            "Province": "Flevoland",
+            "Street": "Larserpoortweg 40",
+            "Zip": "8218 NK",
+            "Latitude": "52.47451806930726",
+            "Longitude": "5.50962532716468"
+          },
+          "Format": "MP4",
+          "Reporter": "Reporter Name",
+          "Sound": "Sound",
+          "Editor": "Editor Name",
+          "Keywords": ["keyword1", "keyword2", "keyword3"],
+          "VoiceOver": "",
+          "Description": "",
+          "ItemName": "ParkInterviewFlevo",
+          "EPG": "EPG",
+          "Duration": "20M15S",
+          "Weather": ["Sunny"],
+          "Producer": "Producer Name",
+          "Director": "Director Name",
+          "Guests": ["guest1", "guest2", "guest3"],
+          "ProgramName": "programname",
+          "FirstWords": "firstword",
+          "MediaLocation": "Server/Location/VideoFiles"
+        },
+        "Audio": null,
+        "Photo": {
+          "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+          "Title": "Reporter Lelystad speaks about Russia",
+          "Folder": "Folder",
+          "RepublishDate": "13-03-2021T12:05:12.411Z",
+          "Rights": "Rights",
+          "Camera": "Camera type",
+          "LastWords": "Russia has been weird",
+          "ProxyFile": "Proxy file",
+          "Location": {
+            "Name": "Omroep Flevoland",
+            "City": "Lelystad",
+            "Province": "Flevoland",
+            "Street": "Larserpoortweg 40",
+            "Zip": "8218 NK",
+            "Latitude": "52.47451806930726",
+            "Longitude": "5.50962532716468"
+          },
+          "Format": "PNG",
+          "MediaLocation": "Server/Location/PhotoFiles",
+          "Image": "Base64 string representing image"
+        }
+      }
+    ]
+  }
 ]
