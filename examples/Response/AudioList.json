@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "729267df-2c67-42ec-86d0-e8c9f0293f9c",
+    "Title": "Reporter Lelystad speaks about Russia",
+    "Folder": "Folder",
+    "RepublishDate": "13-03-2021T12:05:12.411Z",
+    "Rights": "Rights",
+    "Camera": "Camera type",
+    "LastWords": "Russia has been weird",
+    "ProxyFile": "Proxy file",
+    "Presentation": "Presentation",
+    "Location": {},
+    "Format": "MP3",
+    "AudioUrl": "Server/Location/AudioFiles",
+    "Duration": "15M20S",
+    "Weather": {},
+    "FirstWords": "Russia something something",
+    "ProgramName": "Program name"
+  },
+  {
+    "Id": "729267df-2c67-42ec-86d0-e8c9f0293f9c",
+    "Title": "Reporter Lelystad speaks about Russia again",
+    "Folder": "Folder",
+    "RepublishDate": "14-03-2021T12:05:12.411Z",
+    "Rights": "Rights",
+    "Camera": "Camera type",
+    "LastWords": "Russia has been weird again",
+    "ProxyFile": "Proxy file",
+    "Presentation": "Presentation",
+    "Location": {},
+    "Format": "MP3",
+    "AudioUrl": "Server/Location/AudioFiles",
+    "Duration": "18M20S",
+    "Weather": {},
+    "FirstWords": "Russia something something something",
+    "ProgramName": "Program name"
+  }
+]

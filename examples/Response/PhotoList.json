@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "cf5a0033-37f1-49df-92f4-816352ac8cba",
+    "Title": "Park interview flevoland",
+    "Folder": "Folder",
+    "RepublishDate": "13-03-2021T12:05:12.411Z",
+    "Rights": "Rights",
+    "Camera": "Camera type",
+    "LastWords": "Park was very interesting.",
+    "ProxyFile": "Proxy file",
+    "Presentation": "Presentation",
+    "Location": {},
+    "Format": "PNG",
+    "MediaLocation": "Server/Location/PhotoFiles",
+    "Image": "Base64 string representing image"
+  },
+  {
+    "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+    "Title": "Reporter Lelystad speaks about Russia",
+    "Folder": "Folder",
+    "RepublishDate": "13-03-2021T12:05:12.411Z",
+    "Rights": "Rights",
+    "Camera": "Camera type",
+    "LastWords": "Russia has been weird",
+    "ProxyFile": "Proxy file",
+    "Presentation": "Presentation",
+    "Location": {},
+    "Format": "PNG",
+    "MediaLocation": "Server/Location/PhotoFiles",
+    "Image": "Base64 string representing image"
+  }
+]

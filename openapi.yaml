@@ -76,6 +76,122 @@ paths:
               $ref: schemas/Archive.yaml#/components/schemas/CreateArchive
             example:
               $ref: examples/Request/CreateArchive.json
+  /api/v1/Archive/{id}/VideoItems:
+    put:
+      summary: Add a videofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A videofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem
+            example:
+              $ref: examples/Response/AddVideoItemToArchive.json
+    get:
+      summary: Gets list of all videoitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing videoitems within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem_List
+              example:
+                $ref: examples/Response/VideoList.json
+  /api/v1/Archive/{id}/AudioItems:
+    put:
+      summary: Add an audiofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: An audiofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem
+            example:
+              $ref: examples/Response/AddAudioItemToArchive.json
+    get:
+      summary: Gets list of all audioitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing audioitems within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem_List
+              example:
+                $ref: examples/Response/AudioList.json
+  /api/v1/Archive/{id}/PhotoItems:
+    put:
+      summary: Add a photofile to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A photofile is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem
+            example:
+              $ref: examples/Response/AddPhotoItemToArchive.json
+    get:
+      summary: Gets list of all photoitems within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing photofiles within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem_List
+              example:
+                $ref: examples/Response/PhotoList.json
+  /api/v1/Archive/{id}/Stories:
+    put:
+      summary: Add a story to an archive
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: A story is added to the archive.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
+            example:
+              $ref: examples/Response/AddNewsItemToArchive.json
+    get:
+      summary: Gets list of all stories within the archive
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A list of all existing stories within the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem_List
+              example:
+                $ref: examples/Response/NewsItemList.json
   /api/v1/newsitem/{id}:
     get:
       summary: Get a specific newsitem
@@ -87,9 +203,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
               example:
-                $ref: examples/Response/GetNewsItem.json
+                $ref: examples/Response/NewsItem.json
     patch:
       summary: Edits newsitem
       tags:
@@ -100,9 +216,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: schemas/Newsitem.yaml#/components/schemas/GetNewsItem
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
               example:
-                $ref: examples/Response/GetNewsItem.json
+                $ref: examples/Response/NewsItem.json
       requestBody:
         required: true
         content:

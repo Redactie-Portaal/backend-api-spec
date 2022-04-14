@@ -46,7 +46,7 @@ components:
           type: string
     VideoItem:
       type: object
-      description: Gets the specified photo item
+      description: Gets the specified video item
       properties:
         Id:
           description: A user's unique GUID
@@ -78,26 +78,84 @@ components:
           type: string
         Location:
           description:
-          type: location
+          type: object
         Format:
+          description:
+          type: string
+        Reporter:
+          description:
+          type: string
+        Sound:
+          description:
+          type: string
+        Editor:
+          description:
+          type: string
+        lastPicture:
+          description:
+          type: string
+        Keywords:
+          description:
+          type: array
+          items:
+            type: string
+        VoiceOver:
+          description:
+          type: string
+        Description:
+          description:
+          type: string
+        ProgramDate:
+          description:
+          type: datetime
+        ItemName:
+          description:
+          type: string
+        EPG:
+          description:
+          type: string
+        Duration:
+          description:
+          type: string
+        ArchiveMaterial:
+          description:
+          type: string
+        Weather:
+          description:
+          type: object #todo insert weather schema reference
+        Producer:
+          description:
+          type: string
+        Director:
+          description:
+          type: string
+        Guests:
+          description:
+          type: array
+          items:
+            type: string
+        FirstPicture:
+          description:
+          type: string
+        ProgramName:
+          description:
+          type: string
+        FirstWords:
           description:
           type: string
         MediaLocation:
           description:
           type: uri
-        Image:
-          description:
-          type: string
     AudioItem:
       type: object
-      description: Gets the specified photo item
+      description: Gets the specified audio item
       properties:
         Id:
           description: A user's unique GUID
           type: string
           readonly: true
         Title:
-          description: The title of the photo
+          description: The title of the audio
           type: string
         Folder:
           description:
@@ -106,13 +164,13 @@ components:
           description: The republishing date
           type: datetime
         Rights:
-          description: Copyright of the photo
+          description: Copyright of the audio
           type: string
         Camera:
-          description: Camera used to capture the photo
+          description: Camera used to capture the audio
           type: string
         LastWords:
-          description: Last words of the photo
+          description: Last words of the audio
           type: string
         ProxyFile:
           description:
@@ -122,13 +180,37 @@ components:
           type: string
         Location:
           description:
-          type: location
+          type: object
         Format:
           description:
           type: string
-        MediaLocation:
+        AudioUrl:
           description:
           type: uri
-        Image:
+        Duration:
           description:
           type: string
+        Weather:
+          description:
+          type: object
+        FirstWords:
+          description:
+          type: string
+        ProgramName:
+          description:
+          type: string
+    PhotoItem_List:
+      description: List of photos
+      type: array
+      items:
+        $ref: "#/components/schemas/PhotoItem"
+    VideoItem_List:
+      description: List of videos
+      type: array
+      items:
+        $ref: "#/components/schemas/VideoItem"
+    AudioItem_List:
+      description: List of audios
+      type: array
+      items:
+        $ref: "#/components/schemas/AudioItem"
