@@ -147,34 +147,97 @@ paths:
           application/json:
             example:
               $ref: examples/Request/PublishStory.json
-  /api/v1/Profiles:
+/api/v1/Address/{id}:
     get:
-      summary: Get list of /api/v1/Profiles/
+      summary: Get address by id
       tags:
-       - Profile
+        - Address
       responses:
         '200':
-          description: List of profiles
+          description: Address is received
           content:
-           application/json:
-             example:
-               $ref: examples/Response/ProfileList.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/ProfileList
-  /api/v1/Profiles/{id}:
-    get:
-      summary: Get list of /api/v1/Profiles/
-      tags:
-       - Profile
-      responses:
+            application/json:
+              schema:
+                $ref: schemas/Address.yaml#/components/AddressModel
+              example:
+                GUID: 3fa85f64-5717-4562-b3fc-2c963f66afa6       
+    delete:
+        summary: Delete an Address
+        tags:
+        - Address
+        responses:
         '200':
-          description: Representation of profile
-          content:
-           application/json:
-             example:
-               $ref: examples/Response/Profile.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/Profile
+            description: Address deleted.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address kunt verwijderen
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Delete
+            example: 
+                 url: ../api/[controller]/"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"   
+/api/v1/Address:
+    post:
+        summary: Create an Address
+        tags:
+        - Address
+        responses:
+        '201':
+            description: Address created.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address aan kunt maken met een requestbody.
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Address
+            example:
+              $ref: examples/Response/Address.json
+            
+    patch:
+        summary: update an Address
+        tags:
+        - Address
+        responses:
+        '200':
+            description: Address updated.
+        requestBody:
+        description: Dit is een voorbeeld van hoe je een Address kunt updaten
+        content:
+            application/json:
+            schema:
+                $ref: schemas/Address.yaml#/components/schemas/Address
+            example:
+              $ref: examples/Response/Address.json
+
+
+/api/v1/Profiles:
+get:
+    summary: Get list of /api/v1/Profiles/
+    tags:
+    - Profile
+    responses:
+    '200':
+        description: List of profiles
+        content:
+        application/json:
+            example:
+            $ref: examples/Response/ProfileList.json
+            schema:
+            $ref: schemas/Profile.yaml#/components/schemas/ProfileList
+/api/v1/Profiles/{id}:
+    get:
+        summary: Get list of /api/v1/Profiles/
+        tags:
+        - Profile
+        responses:
+        '200':
+            description: Representation of profile
+            content:    
+            application/json:
+                example:
+                $ref: examples/Response/Profile.json
+                schema:
+                $ref: schemas/Profile.yaml#/components/schemas/Profile
     patch:
       summary: Update user details
       tags:
