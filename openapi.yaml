@@ -117,9 +117,29 @@ paths:
           content:
             application/json:
               schema:
-                $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem_List
+                $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem
               example:
-                $ref: examples/Response/VideoList.json
+                $ref: examples/Response/AddVideoItemToArchive.json
+    delete:
+      summary: Deletes a specific video item.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified video item has been deleted.
+    put:
+      summary: Edits the specific video item.
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The specific video item has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem
   /api/v1/Archive/{id}/AudioItems:
     put:
       summary: Add an audiofile to an archive
@@ -149,6 +169,40 @@ paths:
                 $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem_List
               example:
                 $ref: examples/Response/AudioList.json
+  /api/v1/Archive/{id}/AudioItems/{id}:
+    get:
+      summary: Gets a specific audio item from an archive.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A specific audio item from the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem
+              example: 
+                $ref: examples/Response/AddAudioItemToArchive.json
+    delete:
+      summary: Deletes a specific audio item.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified audio item has been deleted.
+    put:
+      summary: Edits the specific audio item.
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The specific audio item has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem
   /api/v1/Archive/{id}/PhotoItems:
     put:
       summary: Add a photofile to an archive
@@ -178,6 +232,40 @@ paths:
                 $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem_List
               example:
                 $ref: examples/Response/PhotoList.json
+  /api/v1/Archive/{id}/PhotoItems/{id}:
+    get:
+      summary: Gets a specific photo item from an archive.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A specific photo item from the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem
+              example:
+                $ref: examples/Response/AddPhotoItemToArchive.json
+    delete:
+      summary: Deletes a specific photo item.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified photo item has been deleted.
+    put:
+      summary: Edits the specific photo item.
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The specific photo item has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem
   /api/v1/Archive/{id}/Stories:
     put:
       summary: Add a story to an archive
@@ -207,6 +295,40 @@ paths:
                 $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem_List
               example:
                 $ref: examples/Response/NewsItemList.json
+  /api/v1/Archive/{id}/Stories/{id}:
+    get:
+      summary: Gets a specific story item from an archive.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A specific story item from the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
+              example:
+                $ref: examples/Response/NewsItem.json
+    delete:
+      summary: Deletes a specific story item.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: The specified story item has been deleted.
+    put:
+      summary: Edits the specific story item.
+      tags:
+        - Archive
+      responses:
+        "201":
+          description: The specific story item has been edited
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: schemas/Newsitem.yaml#/components/schemas/NewsItem
   /api/v1/newsitem/{id}:
     get:
       summary: Get a specific newsitem
