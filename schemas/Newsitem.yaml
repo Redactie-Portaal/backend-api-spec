@@ -32,9 +32,16 @@ components:
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem
@@ -57,6 +64,12 @@ components:
         Status:
           type: integer
           description: Status of the newsitem
+          enum:
+          - DELETED
+          - INPRODUCTION
+          - DONE
+          - PUBLICATION
+          - ARCHIVED
         Author:
           type: string
           description: Name of the author of the newsitem
@@ -81,9 +94,16 @@ components:
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem
@@ -103,6 +123,12 @@ components:
         Status:
           type: string
           description: The status of the newsitem
+          enum:
+          - DELETED
+          - INPRODUCTION
+          - DONE
+          - PUBLICATION
+          - ARCHIVED
         Author:
           type: string
           description: Name of the author of the newsitem
@@ -123,9 +149,16 @@ components:
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem

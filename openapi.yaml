@@ -48,7 +48,7 @@ paths:
       responses:
         "200":
           description: The specified archive has been deleted.
-    put:
+    patch:
       summary: Edits the archive
       tags:
         - Archive
@@ -127,7 +127,7 @@ paths:
       responses:
         "200":
           description: The specified video item has been deleted.
-    post:
+    patch:
       summary: Edits the specific video item.
       tags:
         - Archive
@@ -190,7 +190,7 @@ paths:
       responses:
         "200":
           description: The specified audio item has been deleted.
-    post:
+    patch:
       summary: Edits the specific audio item.
       tags:
         - Archive
@@ -253,7 +253,7 @@ paths:
       responses:
         "200":
           description: The specified photo item has been deleted.
-    post:
+    patch:
       summary: Edits the specific photo item.
       tags:
         - Archive
@@ -316,7 +316,7 @@ paths:
       responses:
         "200":
           description: The specified story item has been deleted.
-    post:
+    patch:
       summary: Edits the specific story item.
       tags:
         - Archive
