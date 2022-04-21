@@ -53,9 +53,9 @@ components:
         ApprovalStatus:
           type: string
           enum:
-            - Pending
-            - Approved
-            - Denied
+            - PENDING
+            - APPROVED
+            - DENIED
         Title:
           type: string
           description: Title of the newsitem
@@ -110,9 +110,9 @@ components:
         ApprovalStatus:
           type: string
           enum:
-            - Pending
-            - Approved
-            - Denied
+            - PENDING
+            - APPROVED
+            - DENIED
         Author:
           type: string
           description: Name of the author of the newsitem
