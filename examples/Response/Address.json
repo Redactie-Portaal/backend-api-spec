@@ -1,9 +1,9 @@
 {
-  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "companyName": "string",
-  "address": "string",
-  "postalCode": "string",
-  "phoneNumber": "string",
-  "emailAddress": "string",
-  "webpage": "string"
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "CompanyName": "Voorbeeld Company name",
+  "Address": "Adress 123",
+  "PostalCode": "1234AB",
+  "PhoneNumber": "0612345678",
+  "EmailAddress": "email@emailhost.com",
+  "Webpage": "www.nederlandsewebsite.nl"
 }
