@@ -50,6 +50,12 @@ components:
         Id:
           type: string
           description: Id of the newsitem
+        ApprovalStatus:
+          type: string
+          enum:
+            - Pending
+            - Approved
+            - Denied
         Title:
           type: string
           description: Title of the newsitem
@@ -101,6 +107,12 @@ components:
         Status:
           type: string
           description: The status of the newsitem
+        ApprovalStatus:
+          type: string
+          enum:
+            - Pending
+            - Approved
+            - Denied
         Author:
           type: string
           description: Name of the author of the newsitem

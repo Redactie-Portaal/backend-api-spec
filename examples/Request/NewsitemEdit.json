@@ -1,6 +1,7 @@
 {
     "Title": "string",
     "Status": null,
+    "ApprovalStatus": "Approved",
     "Author": "string",
     "Source": {},
     "BodyDescription": "string",
