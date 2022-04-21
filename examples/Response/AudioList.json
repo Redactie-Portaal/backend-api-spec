@@ -8,6 +8,7 @@
     "Camera": "Camera type",
     "LastWords": "Russia has been weird",
     "ProxyFile": "Proxy file",
+    "Presentation": "",
     "Location": {
       "Name": "Omroep Flevoland",
       "City": "Lelystad",
@@ -20,11 +21,10 @@
     "Format": "MP3",
     "AudioUrl": "Server/Location/AudioFiles",
     "Duration": "15M20S",
-    "Weather": ["Sunny"],
+    "Weather": "Sunny",
     "FirstWords": "Russia something something",
     "ProgramName": "Program name"
-  }
-  ,
+  },
   {
     "Id": "729267df-2c67-42ec-86d0-e8c9f0293f9c",
     "Title": "Reporter Lelystad speaks about Russia",
@@ -34,6 +34,7 @@
     "Camera": "Camera type",
     "LastWords": "Russia has been weird",
     "ProxyFile": "Proxy file",
+    "Presentation": "",
     "Location": {
       "Name": "Omroep Flevoland",
       "City": "Lelystad",
@@ -46,8 +47,8 @@
     "Format": "MP3",
     "AudioUrl": "Server/Location/AudioFiles",
     "Duration": "15M20S",
-    "Weather": ["Sunny"],
+    "Weather": "Sunny",
     "FirstWords": "Russia something something",
     "ProgramName": "Program name"
-  }  
+  }
 ]

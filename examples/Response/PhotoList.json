@@ -1,23 +1,24 @@
 [
   {
-    "Id": "cf5a0033-37f1-49df-92f4-816352ac8cba",
-    "Title": "Park interview flevoland",
+    "Id": "6561269e-3026-422a-905d-1954aaaf2780",
+    "Title": "Reporter Lelystad speaks about Russia",
     "Folder": "Folder",
     "RepublishDate": "13-03-2021T12:05:12.411Z",
     "Rights": "Rights",
     "Camera": "Camera type",
-    "LastWords": "Park was very interesting.",
+    "LastWords": "Russia has been weird",
     "ProxyFile": "Proxy file",
-    "Presentation": "Presentation",
+    "Presentation": "",
     "Location": {
-      "Name": "Omroep Flevoland",
-      "City": "Lelystad",
-      "Province": "Flevoland",
-      "Street": "Larserpoortweg 40",
-      "Zip": "8218 NK",
-      "Latitude": "52.47451806930726",
-      "Longitude": "5.50962532716468"
-    },
+        "Name": "Omroep Flevoland",
+        "City": "Lelystad",
+        "Province": "Flevoland",
+        "Street": "Larserpoortweg 40",
+        "Zip": "8218 NK",
+        "Latitude": "52.47451806930726",
+        "Longitude": "5.50962532716468"
+      }
+      ,
     "Format": "PNG",
     "MediaLocation": "Server/Location/PhotoFiles",
     "Image": "Base64 string representing image"
@@ -31,16 +32,17 @@
     "Camera": "Camera type",
     "LastWords": "Russia has been weird",
     "ProxyFile": "Proxy file",
-    "Presentation": "Presentation",
+    "Presentation": "",
     "Location": {
-      "Name": "Omroep Flevoland",
-      "City": "Lelystad",
-      "Province": "Flevoland",
-      "Street": "Larserpoortweg 40",
-      "Zip": "8218 NK",
-      "Latitude": "52.47451806930726",
-      "Longitude": "5.50962532716468"
-    },
+        "Name": "Omroep Flevoland",
+        "City": "Lelystad",
+        "Province": "Flevoland",
+        "Street": "Larserpoortweg 40",
+        "Zip": "8218 NK",
+        "Latitude": "52.47451806930726",
+        "Longitude": "5.50962532716468"
+      }
+      ,
     "Format": "PNG",
     "MediaLocation": "Server/Location/PhotoFiles",
     "Image": "Base64 string representing image"

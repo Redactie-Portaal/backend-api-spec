@@ -106,6 +106,20 @@ paths:
                 $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem_List
               example:
                 $ref: examples/Response/VideoList.json
+  /api/v1/Archive/{id}/VideoItems/{id}:
+    get:
+      summary: Gets a specific video item from an archive.
+      tags:
+        - Archive
+      responses:
+        "200":
+          description: A specific video item from the archive is provided.
+          content:
+            application/json:
+              schema:
+                $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem_List
+              example:
+                $ref: examples/Response/VideoList.json
   /api/v1/Archive/{id}/AudioItems:
     put:
       summary: Add an audiofile to an archive
@@ -314,110 +328,107 @@ paths:
           application/json:
             example:
               $ref: examples/Request/PublishStory.json
-/api/v1/Address/{id}:
+  /api/v1/Address/{id}:
     get:
       summary: Get address by id
       tags:
         - Address
       responses:
-        '200':
+        "200":
           description: Address is received
           content:
             application/json:
               schema:
-                $ref: schemas/Address.yaml#/components/AddressModel
+                $ref: schemas/Address.yaml#/components/Address
               example:
-                GUID: 3fa85f64-5717-4562-b3fc-2c963f66afa6       
+                GUID: 3fa85f64-5717-4562-b3fc-2c963f66afa6
     delete:
-        summary: Delete an Address
-        tags:
+      summary: Delete an Address
+      tags:
         - Address
-        responses:
-        '200':
-            description: Address deleted.
-        requestBody:
+      responses:
+        "200":
+          description: Address deleted.
+      requestBody:
         description: Dit is een voorbeeld van hoe je een Address kunt verwijderen
         content:
-            application/json:
+          application/json:
             schema:
-                $ref: schemas/Address.yaml#/components/schemas/Delete
-            example: 
-                 url: ../api/[controller]/"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"   
-/api/v1/Address:
+              $ref: schemas/Address.yaml#/components/schemas/Delete
+            example:
+              url: ../api/[controller]/"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"
+  /api/v1/Address:
     post:
-        summary: Create an Address
-        tags:
+      summary: Create an Address
+      tags:
         - Address
-        responses:
-        '201':
-            description: Address created.
-        requestBody:
+      responses:
+        "201":
+          description: Address created.
+      requestBody:
         description: Dit is een voorbeeld van hoe je een Address aan kunt maken met een requestbody.
         content:
-            application/json:
+          application/json:
             schema:
-                $ref: schemas/Address.yaml#/components/schemas/Address
+              $ref: schemas/Address.yaml#/components/schemas/Address
             example:
               $ref: examples/Response/Address.json
-            
     patch:
-        summary: update an Address
-        tags:
+      summary: update an Address
+      tags:
         - Address
-        responses:
-        '200':
-            description: Address updated.
-        requestBody:
+      responses:
+        "200":
+          description: Address updated.
+      requestBody:
         description: Dit is een voorbeeld van hoe je een Address kunt updaten
         content:
-            application/json:
+          application/json:
             schema:
-                $ref: schemas/Address.yaml#/components/schemas/Address
+              $ref: schemas/Address.yaml#/components/schemas/Address
             example:
               $ref: examples/Response/Address.json
-
-
-/api/v1/Profiles:
-get:
-    summary: Get list of /api/v1/Profiles/
-    tags:
-    - Profile
-    responses:
-    '200':
-        description: List of profiles
-        content:
-        application/json:
-            example:
-            $ref: examples/Response/ProfileList.json
-            schema:
-            $ref: schemas/Profile.yaml#/components/schemas/ProfileList
-/api/v1/Profiles/{id}:
+  /api/v1/Profiles:
     get:
-        summary: Get list of /api/v1/Profiles/
-        tags:
+      summary: Get list of /api/v1/Profiles/
+      tags:
         - Profile
-        responses:
-        '200':
-            description: Representation of profile
-            content:    
+      responses:
+        "200":
+          description: List of profiles
+          content:
             application/json:
-                example:
+              example:
+                $ref: examples/Response/ProfileList.json
+              schema:
+                $ref: schemas/Profile.yaml#/components/schemas/ProfileList
+  /api/v1/Profiles/{id}:
+    get:
+      summary: Get list of /api/v1/Profiles/
+      tags:
+        - Profile
+      responses:
+        "200":
+          description: Representation of profile
+          content:
+            application/json:
+              example:
                 $ref: examples/Response/Profile.json
-                schema:
+              schema:
                 $ref: schemas/Profile.yaml#/components/schemas/Profile
     patch:
       summary: Update user details
       tags:
         - Profile
       responses:
-        '200':
+        "200":
           description: Updated user
           content:
-           application/json:
-             example:
-               $ref: examples/Response/Profile.json
-             schema:
-               $ref: schemas/Profile.yaml#/components/schemas/Profile
+            application/json:
+              example:
+                $ref: examples/Response/Profile.json
+              schema:
+                $ref: schemas/Profile.yaml#/components/schemas/Profile
       requestBody:
         required: true
         content:
@@ -430,55 +441,55 @@ get:
     get:
       summary: Get list of calendar items
       tags:
-       - Calendar
+        - Calendar
       responses:
-        '200':
+        "200":
           description: List of calendar items
           content:
-           application/json:
-             example:
-               $ref: examples/Response/CalendarItemList.json
-             schema:
-               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItemList
+            application/json:
+              example:
+                $ref: examples/Response/CalendarItemList.json
+              schema:
+                $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItemList
   /api/v1/CalendarItems/{id}:
     get:
       summary: Get specific calendar item
       tags:
-       - Calendar
+        - Calendar
       responses:
-        '200':
+        "200":
           description: Representation of the calendar item
           content:
-           application/json:
-             example:
-               $ref: examples/Response/CalendarItem.json
-             schema:
-               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+            application/json:
+              example:
+                $ref: examples/Response/CalendarItem.json
+              schema:
+                $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
     delete:
       summary: Delete specific calendar item
       tags:
-       - Calendar
+        - Calendar
       responses:
-        '201':
+        "201":
           description: Accepted, but no content
     patch:
       summary: Update specific calendar item
       tags:
-       - Calendar
+        - Calendar
       responses:
-        '200':
+        "200":
           description: Representation of the updated calendar item
           content:
-           application/json:
-             example:
-               $ref: examples/Response/CalendarItem.json
-             schema:
-               $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+            application/json:
+              example:
+                $ref: examples/Response/CalendarItem.json
+              schema:
+                $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
       requestBody:
         required: true
         content:
           application/json:
-           example:
-            $ref: examples/Request/CalendarItemEdit.json
-           schema:
-            $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem
+            example:
+              $ref: examples/Request/CalendarItemEdit.json
+            schema:
+              $ref: schemas/CalendarItem.yaml#/components/schemas/CalendarItem

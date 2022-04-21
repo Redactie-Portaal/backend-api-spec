@@ -29,6 +29,9 @@ components:
         Editor:
           description: The editor of this video item.
           type: string
+        LastPicture:
+          description:
+          type: string
         Keywords:
           description: The keywords that are attached to this video item to be easier to find within the archive.
           type: array
@@ -49,6 +52,9 @@ components:
         Duration:
           description: The length of the video item.
           type: string
+        ArchiveMaterial:
+          description:
+          type: string
         Weather:
           $ref: Weather.yaml#/components/schemas/Weather
         Producer:
@@ -62,14 +68,14 @@ components:
           type: array
           items:
             type: string
+        FirstPicture:
+          description:
+          type: string
         ProgramName: 
           description: Program name that is associated with the video item.
           type: string
         FirstWords:
           description: First words of the video item.
-          type: string
-        LastWords:
-          description: Last words of the video item.
           type: string
         MediaLocation:
           description: The location the video item was stored.
@@ -91,9 +97,6 @@ components:
           $ref: Weather.yaml#/components/schemas/Weather
         FirstWords:
           description: First words of the audio item.
-          type: string
-        LastWords:
-          description: Last words of the audio item.
           type: string
         ProgramName: 
           description: Program name that is associated with the audio item.
@@ -135,8 +138,14 @@ components:
         Camera:
           description: Camera used to record the media item.
           type: string
+        LastWords:
+          description: Last words of the video item.
+          type: string
         ProxyFile:
           description: ###
+          type: string
+        Presentation:
+          description:
           type: string
         Location:
           description: The phyiscal location the media item was recorded in.

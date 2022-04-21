@@ -7,16 +7,16 @@
   "Camera": "Camera type",
   "LastWords": "Russia has been weird",
   "ProxyFile": "Proxy file",
+  "Presentation": "",
   "Location": {
-      "Name": "Omroep Flevoland",
-      "City": "Lelystad",
-      "Province": "Flevoland",
-      "Street": "Larserpoortweg 40",
-      "Zip": "8218 NK",
-      "Latitude": "52.47451806930726",
-      "Longitude": "5.50962532716468"
-    }
-    ,
+    "Name": "Omroep Flevoland",
+    "City": "Lelystad",
+    "Province": "Flevoland",
+    "Street": "Larserpoortweg 40",
+    "Zip": "8218 NK",
+    "Latitude": "52.47451806930726",
+    "Longitude": "5.50962532716468"
+  },
   "Format": "PNG",
   "MediaLocation": "Server/Location/PhotoFiles",
   "Image": "Base64 string representing image"

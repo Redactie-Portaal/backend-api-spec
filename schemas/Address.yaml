@@ -1,6 +1,6 @@
 components:
   schemas:
-    AddressModel:
+    Address:
       description: Address 
       type: object
       properties:
