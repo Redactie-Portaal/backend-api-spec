@@ -25,6 +25,7 @@ components:
         ProdutionDate:
           type: string
           description: Datetime when the newsitem was finished
+          readonly: true
         EndDate:
           type: string
           description: Date when the newsitem has to be published
@@ -73,6 +74,7 @@ components:
         ProdutionDate:
           type: string
           description: Datetime when the newsitem was finished
+          readonly: true
         EndDate:
           type: string
           description: Date when the newsitem has to be published
