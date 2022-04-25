@@ -38,7 +38,8 @@ components:
         ContactDetails:
           type: array
           description: A list of contacts for the newsitem
-          items: "#/components/schemas/Contact"
+          items: 
+            $ref: "#/components/schemas/Contact"
         LocationDetails:
           $ref: "#/components/schemas/Location"
         ProductionDate:
@@ -66,12 +67,12 @@ components:
           type: array
           description: Videos included with the newsitem
           items: 
-            ref: "#/components/schemas/MediaVideoItem"
+            $ref: "#/components/schemas/MediaVideoItem"
         Audio:
           type: array
           description: Audio included with the newsitem
           items: 
-            ref: "#/components/schemas/MediaAudioItem"
+            $ref: "#/components/schemas/MediaAudioItem"
         Photos:
           type: array
           description: Photos included with the newsitem

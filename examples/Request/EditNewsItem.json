@@ -34,7 +34,7 @@
         "Longtitude": "15 10.234, 30 -23.456"
       },
       "Format": "string",
-      "MediaLocation": "some uri",
+      "MediaLocation": "uri.com",
       "RepublishDate": "2008-10-31T17:04:32",
       "Reporter": "Some name",
       "Sound": "uri to sound",
@@ -84,7 +84,7 @@
         "Longtitude": "15 10.234, 30 -23.456"
       },
       "Format": "string",
-      "MediaLocation": "some uri",
+      "MediaLocation": "uri.com",
       "Duration": 150,
       "Weather": "CLOUDY",
       "FirstWords": "First words of program",
@@ -110,7 +110,7 @@
         "Longtitude": "15 10.234, 30 -23.456"
       },
       "Format": "string",
-      "MediaLocation": "some uri",
+      "MediaLocation": "uri.com",
       "Image": "uri to image"
     }
   ]
