@@ -30,11 +30,11 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
-      "MediaLocation": "uri.com",
+      "MediaLocation": "some uri",
       "RepublishDate": "2008-10-31T17:04:32",
       "Reporter": "Some name",
       "Sound": "uri to sound",
@@ -80,11 +80,11 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
-      "MediaLocation": "uri.com",
+      "MediaLocation": "some uri",
       "Duration": 150,
       "Weather": "CLOUDY",
       "FirstWords": "First words of program",
@@ -106,11 +106,11 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
-      "MediaLocation": "uri.com",
+      "MediaLocation": "some uri",
       "Image": "uri to image"
     }
   ]
