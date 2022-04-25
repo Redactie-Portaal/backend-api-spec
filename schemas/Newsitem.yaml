@@ -1,6 +1,6 @@
 components:
   schemas:
-    ItemCreation:
+    NewsItem:
       description: Newsitem
       type: object
       properties:
@@ -42,12 +42,13 @@ components:
         LocationDetails:
           $ref: "#/components/schemas/Location"
         ProductionDate:
-          type: datetime
+          type: string
           description: Datetime when the newsitem was finished
-          readonly: true
+          example: '2008-10-31T17:04:32'
         EndDate:
-          type: datetime
+          type: string
           description: Datetime when the newsitem has to be published
+          example: '2008-10-31T17:04:32'
         Category:
           enum: 
             - NEWS
@@ -55,85 +56,6 @@ components:
             - PROGRAMME
           type: string
           description: The category of the newsitem
-          enum:
-          - NEWS
-          - STORY
-          - PROGRAMME
-        Region:
-          enum: 
-           - province
-           - local
-          type: string
-          description: The region of the newsitem
-        Videos:
-          type: array
-          description: Videos included with the newsitem
-          items: 
-            ref: "#/components/schemas/MediaVideoItem"
-        Audio:
-          type: array
-          description: Audio included with the newsitem
-          items: 
-            ref: "#/components/schemas/MediaAudioItem"
-        Photos:
-          type: array
-          description: Photos included with the newsitem
-          items: 
-            ref: "#/components/schemas/MediaPhotoItem"
-    EditNewsItem:
-      description: Newsitem
-      type: object
-      properties:
-        Title:
-          type: string
-          description: Title of the newsitem
-        Status:
-          enum: 
-            - DELETED
-            - INPRODUCTION
-            - DONE
-            - PUBLICATION
-            - ARCHIVED
-          type: string
-          description: Status of newsitem
-        ApprovalState:
-          enum: 
-            - PENDING
-            - APPROVED
-            - DENIED
-            type: string
-            description: State of approval for newsitem
-        Author:
-          type: string
-          description: Name of the author of the newsitem
-        FeedSourceDTO:
-          $ref: "#/components/schemas/FeedSourceDTO"
-        Body:
-          type: string
-          description: Body of the newsitem, the text
-        ContactDetails:
-          type: array
-          description: A list of contacts for the newsitem
-          items: "#/components/schemas/Contact"
-        LocationDetails:
-          $ref: "#/components/schemas/Location"
-        ProductionDate:
-          type: datetime
-          description: Datetime when the newsitem was finished
-        EndDate:
-          type: datetime
-          description: Datetime when the newsitem has to be published
-        Category:
-          enum: 
-            - NEWS
-            - STORY
-            - PROGRAMME
-          type: string
-          description: The category of the newsitem
-          enum:
-          - NEWS
-          - STORY
-          - PROGRAMME
         Region:
           enum: 
            - province
