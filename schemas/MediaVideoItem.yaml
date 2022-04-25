@@ -1,0 +1,107 @@
+components:
+  schemas:
+    MediaVideoItem:
+      description: Video clip
+      type: object
+      properties: 
+        Id: 
+          description: Id of video
+          type: string
+          readonly: true
+        Title: 
+          description: Title of video
+          type: string
+        Folder:
+          description: none # Add description
+          type: string
+        Rights:
+          description: Rights of video
+          type: string
+        Camera:
+          description: Camera used in video
+          type: string
+        LastWords:
+          description: Last words
+          type: string
+        ProxyFile:
+          description: none # Add description
+          type: string
+        Presentation:
+          description: none # Add description
+          type: string
+        Location: 
+          ref: "#/components/schemas/Location"
+        Format:
+          description: none # Add description
+          type: string
+        MediaLocation:
+          description: Uri of medialocatiomn
+          type: string
+        RepublishDate:
+          description: Date of republish
+          type: string
+          example: '2008-10-31T17:04:32'
+        Reporter:
+          description: Name of the reporter 
+          type: string
+        Sound: 
+          description: Uri of sound
+          type: string
+        Editor:
+          description: Name of the video editor
+          type: string
+        LastPicture:
+          description: none # Add description
+          type: object
+        Keywords:
+          description: List of keywords
+          type: array
+          items: string
+        VoiceOver:
+          description: Uri of voiceover audio
+          type: string
+        Description:
+          description: Description of video
+          type: object
+        ProgramDate:
+          description: Datetime of program launch
+          type: string
+          example: '2008-10-31T17:04:32'
+        ItemName:
+          description: Name of the item
+          type: string
+        EPG:
+          description: Electronic program guide
+          type: string
+        DurationSeconds:
+          description: Program duration in seconds
+          type: number
+        ArchiveMaterial:
+          description: Archive material
+          type: string
+        Weather:
+         enum:
+          - SUNNY
+          - RAIN
+          - CLOUDY
+          description: Weather in video
+          type: string
+        Producer:
+          description: Name of producer
+          type: string
+        Director:
+          description: Name of director
+          type: string
+        Guests:
+          description: Names of guests
+          type: array
+          items: string
+        FirstPicture:
+          description: none # Add description
+          type: string
+        ProgramName: 
+          description: Name of program
+          type: string
+        FirstWords:
+          description: First words of program
+          type: string

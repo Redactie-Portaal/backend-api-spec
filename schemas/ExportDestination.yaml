@@ -24,12 +24,12 @@ components:
           type: array
           items:
             enum:
-             - Title
-             - Video
-             - Text
-             - ShortText
-             - Audio
-             - Images
+             - title
+             - video
+             - text
+             - shortText
+             - audio
+             - images
             type: string
     Destination_List:
       description: List of destinations

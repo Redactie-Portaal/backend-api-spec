@@ -1,0 +1,6 @@
+components: # Add this item
+  schemas:
+    FeedSource:
+      description: 
+      type:
+      properties:

@@ -1,0 +1,44 @@
+components:
+  schemas:
+    MediaPhotoItem:
+      description:
+      type:
+      properties: 
+        Id: 
+          description: Id of photo
+          type: string
+          readonly: true
+        Title: 
+          description: Title of photo
+          type: string
+        Folder:
+          description: none # Add description
+          type: string
+        Rights:
+          description: Rights of photo
+          type: string
+        Camera:
+          description: Camera used in photo
+          type: string
+        LastWords:
+          description: Last words
+          type: string
+        ProxyFile:
+          description: none # Add description
+          type: string
+        Presentation:
+          description: none # Add description
+          type: string
+        Location: 
+          ref: "#/components/schemas/Location"
+        Format:
+          description: none # Add description
+          type: string
+        MediaLocation:
+          description: Uri of medialocation
+          type: string
+        Image: # How is this different from medialocation
+          description: Uri of image
+          type: string
+        
+        

@@ -1,0 +1,56 @@
+components:
+  schemas:
+    MediaAudioItem:
+      description:
+      type:
+      properties:
+        Id: 
+          description: Id of audio
+          type: string
+          readonly: true
+        Title: 
+          description: Title of audio
+          type: string
+        Folder:
+          description: none # Add description
+          type: string
+        Rights:
+          description: Rights of audio
+          type: string
+        Camera:
+          description: Camera used in audio
+          type: string
+        LastWords:
+          description: Last words
+          type: string
+        ProxyFile:
+          description: none # Add description
+          type: string
+        Presentation:
+          description: none # Add description
+          type: string
+        Location: 
+          ref: "#/components/schemas/Location"
+        Format:
+          description: none # Add description
+          type: string
+        MediaLocation:
+          description: Uri of medialocation
+          type: string
+        Duration:
+          escription: Duration in seconds
+          type: number
+        Weather:
+         enum:
+          - SUNNY
+          - RAIN
+          - CLOUDY
+          description: Weather in audio
+          type: string
+        FirstWords:
+          description: First words of audio
+          type: string
+        ProgramName: 
+          description: Name of program
+          type: string
+          
