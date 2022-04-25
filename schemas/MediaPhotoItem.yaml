@@ -30,7 +30,7 @@ components:
           description: none # Add description
           type: string
         Location: 
-          ref: "#/components/schemas/Location"
+          $ref: "#/components/schemas/Location"
         Format:
           description: none # Add description
           type: string

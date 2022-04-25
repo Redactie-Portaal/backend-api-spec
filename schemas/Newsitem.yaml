@@ -76,7 +76,7 @@ components:
           type: array
           description: Photos included with the newsitem
           items: 
-            ref: "#/components/schemas/MediaPhotoItem"
+            $ref: "#/components/schemas/MediaPhotoItem"
     NewsItem_List:
       description: gets a list of newsitems
       type: array

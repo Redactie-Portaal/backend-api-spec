@@ -30,7 +30,7 @@ components:
           description: none # Add description
           type: string
         Location: 
-          ref: "#/components/schemas/Location"
+          $ref: "#/components/schemas/Location"
         Format:
           description: none # Add description
           type: string
@@ -38,7 +38,7 @@ components:
           description: Uri of medialocation
           type: string
         Duration:
-          escription: Duration in seconds
+          description: Duration in seconds
           type: number
         Weather:
          enum:
