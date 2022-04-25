@@ -48,7 +48,7 @@ paths:
       responses:
         "200":
           description: The specified archive has been deleted.
-    put:
+    patch:
       summary: Edits the archive
       tags:
         - Archive
@@ -78,7 +78,7 @@ paths:
             example:
               $ref: examples/Request/CreateArchive.json
   /api/v1/Archive/{id}/VideoItems:
-    put:
+    post:
       summary: Add a videofile to an archive
       tags:
         - Archive
@@ -127,7 +127,7 @@ paths:
       responses:
         "200":
           description: The specified video item has been deleted.
-    put:
+    patch:
       summary: Edits the specific video item.
       tags:
         - Archive
@@ -141,7 +141,7 @@ paths:
             schema:
               $ref: schemas/MediaItem.yaml#/components/schemas/VideoItem
   /api/v1/Archive/{id}/AudioItems:
-    put:
+    post:
       summary: Add an audiofile to an archive
       tags:
         - Archive
@@ -190,7 +190,7 @@ paths:
       responses:
         "200":
           description: The specified audio item has been deleted.
-    put:
+    patch:
       summary: Edits the specific audio item.
       tags:
         - Archive
@@ -204,7 +204,7 @@ paths:
             schema:
               $ref: schemas/MediaItem.yaml#/components/schemas/AudioItem
   /api/v1/Archive/{id}/PhotoItems:
-    put:
+    post:
       summary: Add a photofile to an archive
       tags:
         - Archive
@@ -253,7 +253,7 @@ paths:
       responses:
         "200":
           description: The specified photo item has been deleted.
-    put:
+    patch:
       summary: Edits the specific photo item.
       tags:
         - Archive
@@ -267,7 +267,7 @@ paths:
             schema:
               $ref: schemas/MediaItem.yaml#/components/schemas/PhotoItem
   /api/v1/Archive/{id}/Stories:
-    put:
+    post:
       summary: Add a story to an archive
       tags:
         - Archive
@@ -316,7 +316,7 @@ paths:
       responses:
         "200":
           description: The specified story item has been deleted.
-    put:
+    patch:
       summary: Edits the specific story item.
       tags:
         - Archive
@@ -463,7 +463,7 @@ paths:
               schema:
                 $ref: schemas/Address.yaml#/components/schemas/Address
               example:
-                GUID: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                $ref: examples/Response/Address.json
     delete:
       summary: Delete an Address
       tags:
@@ -477,8 +477,6 @@ paths:
           application/json:
             schema:
               $ref: schemas/Address.yaml#/components/schemas/Delete
-            example:
-              url: ../api/[controller]/"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"
   /api/v1/Address:
     post:
       summary: Create an Address

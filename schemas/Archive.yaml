@@ -5,8 +5,8 @@ components:
       description: Gets the archive specified
       properties:
         Id:
-          description: An archive's unique GUID
-          type: string
+          description: An archive's unique UUID
+          type: uuid
           readonly: true
         Title:
           description: The title of the archive to identify what it contains.

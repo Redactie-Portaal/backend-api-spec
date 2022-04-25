@@ -30,8 +30,9 @@ components:
           description: The editor of this video item.
           type: string
         LastPicture:
-          description:
+          description: #Leeg omdat het niet zeker is wat dit is.
           type: string
+          readonly: true
         Keywords:
           description: The keywords that are attached to this video item to be easier to find within the archive.
           type: array
@@ -47,11 +48,12 @@ components:
           description: The name of the video item.
           type: string
         EPG:
-          description: ###
+          description: #Leeg omdat het niet zeker is wat dit is.
           type: string
         Duration:
           description: The length of the video item.
           type: string
+          readonly: true
         ArchiveMaterial:
           description:
           type: string
@@ -69,14 +71,16 @@ components:
           items:
             type: string
         FirstPicture:
-          description:
+          description: #Leeg omdat het niet zeker is wat dit is.
           type: string
         ProgramName: 
           description: Program name that is associated with the video item.
           type: string
+          readonly: true
         FirstWords:
           description: First words of the video item.
           type: string
+          readonly: true
         MediaLocation:
           description: The location the video item was stored.
           type: uri
@@ -93,11 +97,13 @@ components:
         Duration:
           description: The length of the audio item.
           type: string
+          readonly: true
         Weather:
           $ref: Weather.yaml#/components/schemas/Weather
         FirstWords:
           description: First words of the audio item.
           type: string
+          readonly: true
         ProgramName: 
           description: Program name that is associated with the audio item.
           type: string
@@ -129,6 +135,7 @@ components:
         Folder:
           description: The folder the media item is contained within.
           type: string
+          readonly: true
         RepublishDate:
           description: The date the media item has been republished.
           type: datetime
@@ -141,11 +148,12 @@ components:
         LastWords:
           description: Last words of the video item.
           type: string
+          readonly: true
         ProxyFile:
-          description: ###
+          description: #Leeg omdat het niet zeker is wat dit is.
           type: string
         Presentation:
-          description:
+          description: #Leeg omdat het niet zeker is wat dit is.
           type: string
         Location:
           description: The phyiscal location the media item was recorded in.
@@ -153,3 +161,4 @@ components:
         Format:
           description: The file format the media item is based on.
           type: string
+          readonly: true

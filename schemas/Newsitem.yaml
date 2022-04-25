@@ -25,15 +25,23 @@ components:
         ProdutionDate:
           type: string
           description: Datetime when the newsitem was finished
+          readonly: true
         EndDate:
           type: string
           description: Date when the newsitem has to be published
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem
@@ -62,6 +70,12 @@ components:
         Status:
           type: integer
           description: Status of the newsitem
+          enum:
+          - DELETED
+          - INPRODUCTION
+          - DONE
+          - PUBLICATION
+          - ARCHIVED
         Author:
           type: string
           description: Name of the author of the newsitem
@@ -79,15 +93,23 @@ components:
         ProdutionDate:
           type: string
           description: Datetime when the newsitem was finished
+          readonly: true
         EndDate:
           type: string
           description: Date when the newsitem has to be published
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem
@@ -107,6 +129,12 @@ components:
         Status:
           type: string
           description: The status of the newsitem
+          enum:
+          - DELETED
+          - INPRODUCTION
+          - DONE
+          - PUBLICATION
+          - ARCHIVED
         ApprovalStatus:
           type: string
           enum:
@@ -133,9 +161,16 @@ components:
         Category:
           type: string
           description: The category of the newsitem
+          enum:
+          - NEWS
+          - STORY
+          - PROGRAMME
         Region:
           type: string
           description: The region of the newsitem
+          enum:
+          - PROVINCE
+          - LOCAL
         Video:
           type: string
           description: Video included with the newsitem
