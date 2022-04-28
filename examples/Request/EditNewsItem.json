@@ -30,8 +30,8 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
       "MediaLocation": "some uri",
@@ -80,8 +80,8 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
       "MediaLocation": "some uri",
@@ -106,8 +106,8 @@
         "Province": "Noord-brabant",
         "Street": "Somestreet 137",
         "Zip": "1234AB",
-        "Latitude": "15 10.234, 30 -23.456",
-        "Longtitude": "15 10.234, 30 -23.456"
+        "Latitude": "52.47451806930726",
+        "Longtitude": "52.47451806930726"
       },
       "Format": "string",
       "MediaLocation": "some uri",

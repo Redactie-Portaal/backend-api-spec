@@ -7,12 +7,31 @@ components:
       type: object
       description: Gets the specified photo item.
       properties:
-        MediaLocation:
-          description: The location the media is stored.
-          type: uri
-        Image:
-          description: The image string based on a base64 format.
+        Image: 
+          description: Uri of image
           type: string
+    AudioItem:
+      allOf:     # inherits the media item template
+        - $ref: '#/components/schemas/MediaItemTemplate'
+        - type: object
+      type: object
+      properties:
+        Duration:
+            description: Duration in seconds
+            type: number
+          Weather:
+          enum:
+            - SUNNY
+            - RAIN
+            - CLOUDY
+            description: Weather in audio
+            type: string
+          FirstWords:
+            description: First words of audio
+            type: string
+          ProgramName: 
+            description: Name of program
+            type: string
     VideoItem:
       allOf:     # inherits the media item template
         - $ref: '#/components/schemas/MediaItemTemplate'
@@ -20,92 +39,73 @@ components:
       type: object
       description: Gets the specified video item.
       properties:
-        Reporter:
-          description: The reporter that is associated with this video item.
+        RepublishDate:
+          description: Date of republish
           type: string
-        Sound:
-          description: The sound that is linked to this video item.
+          example: '2008-10-31T17:04:32'
+        Reporter:
+          description: Name of the reporter 
+          type: string
+        Sound: 
+          description: Uri of sound
           type: string
         Editor:
-          description: The editor of this video item.
+          description: Name of the video editor
           type: string
         LastPicture:
-          description: #Leeg omdat het niet zeker is wat dit is.
-          type: string
-          readonly: true
+          description: none # Add description
+          type: object
         Keywords:
-          description: The keywords that are attached to this video item to be easier to find within the archive.
+          description: List of keywords
           type: array
-          items:
-            type: string
+          items: string
         VoiceOver:
-          description: The voice over that is attached to the video item.
+          description: Uri of voiceover audio
           type: string
         Description:
-          description: The description of the video item.
+          description: Description of video
+          type: object
+        ProgramDate:
+          description: Datetime of program launch
           type: string
+          example: '2008-10-31T17:04:32'
         ItemName:
-          description: The name of the video item.
+          description: Name of the item
           type: string
         EPG:
-          description: #Leeg omdat het niet zeker is wat dit is.
+          description: Electronic program guide
           type: string
-        Duration:
-          description: The length of the video item.
-          type: string
-          readonly: true
+        DurationSeconds:
+          description: Program duration in seconds
+          type: number
         ArchiveMaterial:
-          description:
+          description: Archive material
           type: string
         Weather:
-          $ref: Weather.yaml#/components/schemas/Weather
+          enum:
+            - SUNNY
+            - RAIN
+            - CLOUDY
+          description: Weather in video
+          type: string
         Producer:
-          description: The producer of the video item.
+          description: Name of producer
           type: string
         Director:
-          description: The director of the video item.
+          description: Name of director
           type: string
         Guests:
-          description: The quests that are involved in the video item.
+          description: Names of guests
           type: array
-          items:
-            type: string
+          items: string
         FirstPicture:
-          description: #Leeg omdat het niet zeker is wat dit is.
+          description: none # Add description
           type: string
         ProgramName: 
-          description: Program name that is associated with the video item.
+          description: Name of program
           type: string
-          readonly: true
         FirstWords:
-          description: First words of the video item.
-          type: string
-          readonly: true
-        MediaLocation:
-          description: The location the video item was stored.
-          type: uri
-    AudioItem:
-      allOf:     # inherits the media item template
-        - $ref: '#/components/schemas/MediaItemTemplate'
-        - type: object
-      type: object
-      description: Gets the specified audio item
-      properties:
-        AudioUrl:
-          description: The url of the audio item.
-          type: uri
-        Duration:
-          description: The length of the audio item.
-          type: string
-          readonly: true
-        Weather:
-          $ref: Weather.yaml#/components/schemas/Weather
-        FirstWords:
-          description: First words of the audio item.
-          type: string
-          readonly: true
-        ProgramName: 
-          description: Program name that is associated with the audio item.
+          description: First words of program
           type: string
     PhotoItem_List:
       description: Gets a list of photo items.
@@ -126,39 +126,36 @@ components:
       description: Template to create inheritance within the media items to reduce clutter.
       type: object
       properties:
-        Id:
+        Id: 
+          description: Id of photo
           type: string
           readonly: true
-        Title:
-          description: The title of the media item.
+        Title: 
+          description: Title of photo
           type: string
         Folder:
-          description: The folder the media item is contained within.
+          description: none # Add description
           type: string
-          readonly: true
-        RepublishDate:
-          description: The date the media item has been republished.
-          type: datetime
         Rights:
-          description: Copyright of the media item.
+          description: Rights of photo
           type: string
         Camera:
-          description: Camera used to record the media item.
+          description: Camera used in photo
           type: string
         LastWords:
-          description: Last words of the video item.
+          description: Last words
           type: string
-          readonly: true
         ProxyFile:
-          description: #Leeg omdat het niet zeker is wat dit is.
+          description: none # Add description
           type: string
         Presentation:
-          description: #Leeg omdat het niet zeker is wat dit is.
+          description: none # Add description
           type: string
-        Location:
-          description: The phyiscal location the media item was recorded in.
-          type: location
+        Location: 
+          $ref: "#/components/schemas/Location"
         Format:
-          description: The file format the media item is based on.
+          description: none # Add description
           type: string
-          readonly: true
+        MediaLocation:
+          description: Uri of medialocation
+          type: string

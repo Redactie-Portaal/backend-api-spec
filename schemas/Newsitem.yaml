@@ -1,185 +1,83 @@
 components:
   schemas:
-    ItemCreation:
-      description: Newsitem
-      type: object
-      properties:
-        Title:
-          type: string
-          description: Title of the newsitem
-        Author:
-          type: string
-          description: Name of the author of the newsitem
-        Source:
-          type: string
-          description: Source?
-        BodyDescription:
-          type: string
-          description: Body of the newsitem, the text
-        ContactDetails:
-          type: string
-          description: Contactdetails for the newsitem
-        LocationDetails:
-          type: string
-          description: Locationdetails for the newsitem
-        ProdutionDate:
-          type: string
-          description: Datetime when the newsitem was finished
-          readonly: true
-        EndDate:
-          type: string
-          description: Date when the newsitem has to be published
-        Category:
-          type: string
-          description: The category of the newsitem
-          enum:
-          - NEWS
-          - STORY
-          - PROGRAMME
-        Region:
-          type: string
-          description: The region of the newsitem
-          enum:
-          - PROVINCE
-          - LOCAL
-        Video:
-          type: string
-          description: Video included with the newsitem
-        Audio:
-          type: string
-          description: Audio included with the newsitem
-        Photo:
-          type: string
-          description: Photos included with the newsitem
     NewsItem:
-      description: Gets a specific newsitem
+      description: Newsitem
       type: object
       properties:
         Id:
-          type: string
+          type: uuid
           description: Id of the newsitem
-        ApprovalStatus:
-          type: string
-          enum:
-            - PENDING
-            - APPROVED
-            - DENIED
+          readonly: true
         Title:
           type: string
           description: Title of the newsitem
         Status:
-          type: integer
-          description: Status of the newsitem
-          enum:
-          - DELETED
-          - INPRODUCTION
-          - DONE
-          - PUBLICATION
-          - ARCHIVED
+          enum: 
+            - DELETED
+            - INPRODUCTION
+            - DONE
+            - PUBLICATION
+            - ARCHIVED
+          type: string
+          description: Status of newsitem
+        ApprovalState:
+          enum: 
+            - PENDING
+            - APPROVED
+            - DENIED
+            type: string
+            description: State of approval for newsitem
         Author:
           type: string
           description: Name of the author of the newsitem
-        Source:
-          type: string
-          description: Source?
+        FeedSource:
+          $ref: "#/components/schemas/FeedSource"
         Body:
-          $ref: '../schemas/Body.yaml#/components/schemas/Body'
+          type: string
+          description: Body of the newsitem, the text
         ContactDetails:
-          type: string
-          description: Contactdetails for the newsitem
+          type: array
+          description: A list of contacts for the newsitem
+          items: 
+            $ref: "#/components/schemas/Contact"
         LocationDetails:
-          type: string
-          description: Locationdetails for the newsitem
-        ProdutionDate:
+          $ref: "#/components/schemas/Location"
+        ProductionDate:
           type: string
           description: Datetime when the newsitem was finished
-          readonly: true
+          example: '2008-10-31T17:04:32'
         EndDate:
           type: string
-          description: Date when the newsitem has to be published
+          description: Datetime when the newsitem has to be published
+          example: '2008-10-31T17:04:32'
         Category:
+          enum: 
+            - NEWS
+            - STORY
+            - PROGRAMME
           type: string
           description: The category of the newsitem
-          enum:
-          - NEWS
-          - STORY
-          - PROGRAMME
         Region:
+          enum: 
+           - province
+           - local
           type: string
           description: The region of the newsitem
-          enum:
-          - PROVINCE
-          - LOCAL
-        Video:
-          type: string
-          description: Video included with the newsitem
+        Videos:
+          type: array
+          description: Videos included with the newsitem
+          items: 
+            $ref: "#/components/schemas/MediaVideoItem"
         Audio:
-          type: string
+          type: array
           description: Audio included with the newsitem
-        Photo:
-          type: string
+          items: 
+            $ref: "#/components/schemas/MediaAudioItem"
+        Photos:
+          type: array
           description: Photos included with the newsitem
-    EditNewsItem:
-      description: Newsitem
-      type: object
-      properties:
-        Title:
-          type: string
-          description: Title of the newsitem
-        Status:
-          type: string
-          description: The status of the newsitem
-          enum:
-          - DELETED
-          - INPRODUCTION
-          - DONE
-          - PUBLICATION
-          - ARCHIVED
-        ApprovalStatus:
-          type: string
-          enum:
-            - PENDING
-            - APPROVED
-            - DENIED
-        Author:
-          type: string
-          description: Name of the author of the newsitem
-        Source:
-          type: string
-          description: Source?
-        Body:
-          $ref: '../schemas/Body.yaml#/components/schemas/Body'
-        ContactDetails:
-          type: string
-          description: Contactdetails for the newsitem
-        LocationDetails:
-          type: string
-          description: Locationdetails for the newsitem
-        EndDate:
-          type: string
-          description: Date when the newsitem has to be published
-        Category:
-          type: string
-          description: The category of the newsitem
-          enum:
-          - NEWS
-          - STORY
-          - PROGRAMME
-        Region:
-          type: string
-          description: The region of the newsitem
-          enum:
-          - PROVINCE
-          - LOCAL
-        Video:
-          type: string
-          description: Video included with the newsitem
-        Audio:
-          type: string
-          description: Audio included with the newsitem
-        Photo:
-          type: string
-          description: Photos included with the newsitem 
+          items: 
+            $ref: "#/components/schemas/MediaPhotoItem"
     NewsItem_List:
       description: gets a list of newsitems
       type: array

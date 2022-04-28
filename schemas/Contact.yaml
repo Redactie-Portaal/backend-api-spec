@@ -1,0 +1,21 @@
+components:
+  schemas:
+    Contact:
+      description: Contact person
+      type: object
+      properties: 
+         Id:
+          type: uuid
+          description: Id of the newsitem
+          readonly: true
+        Name:
+          type: string
+          description: Name of contact
+        Email: 
+          type: string
+          description: Email address of contact
+        TelephoneNumber:
+          type: string
+          description: Phone number of contact
+      
+
