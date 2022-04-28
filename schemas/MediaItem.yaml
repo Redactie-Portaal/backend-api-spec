@@ -7,11 +7,28 @@ components:
       type: object
       description: Gets the specified photo item.
       properties:
-        MediaLocation:
-          description: The location the media is stored.
-          type: uri
         Image: 
           description: Uri of image
+          type: string
+    AudioItem:
+      allOf:     # inherits the media item template
+        - $ref: '#/components/schemas/MediaItemTemplate'
+        - type: object
+      Duration:
+          escription: Duration in seconds
+          type: number
+        Weather:
+         enum:
+          - SUNNY
+          - RAIN
+          - CLOUDY
+          description: Weather in audio
+          type: string
+        FirstWords:
+          description: First words of audio
+          type: string
+        ProgramName: 
+          description: Name of program
           type: string
     VideoItem:
       allOf:     # inherits the media item template
