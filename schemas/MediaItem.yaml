@@ -63,10 +63,10 @@ components:
           description: Archive material
           type: string
         Weather:
-         enum:
-          - SUNNY
-          - RAIN
-          - CLOUDY
+          enum:
+            - SUNNY
+            - RAIN
+            - CLOUDY
           description: Weather in video
           type: string
         Producer:
